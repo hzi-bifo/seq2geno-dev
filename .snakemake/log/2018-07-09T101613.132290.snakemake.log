@@ -1,0 +1,10 @@
+Building DAG of jobs...
+AmbiguousRuleException:
+Rules samtools_sort and map2reference are ambiguous for the file tmp/CH2500/bwa.sorted.bam.
+Consider starting rule output with a unique prefix or constrain your wildcards.
+Wildcards:
+	samtools_sort: tmp_dir=tmp,strain=CH2500,mapper=bwa
+	map2reference: tmp_dir=tmp,strain=CH2500,mapper=bwa.sorted
+Expected input files:
+	samtools_sort: tmp/CH2500/bwa.bam
+	map2reference: /net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v3/data/reference/RefCln_UCBPP-PA14.fa data/strains/dna/CH2500_1.fq.gz data/strains/dna/CH2500_2.fq.gz /net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v3/data/reference/RefCln_UCBPP-PA14.fa.bwt

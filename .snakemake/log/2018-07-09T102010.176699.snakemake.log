@@ -1,0 +1,31 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	1	map2reference
+	1	samtools_sort
+	3
+
+rule map2reference:
+    input: /net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v3/data/reference/RefCln_UCBPP-PA14.fa, data/strains/dna/CH2500_1.fq.gz, data/strains/dna/CH2500_2.fq.gz, /net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v3/data/reference/RefCln_UCBPP-PA14.fa.bwt
+    output: tmp/CH2500/bwa.raw.bam
+    jobid: 2
+    wildcards: tmp_dir=tmp, strain=CH2500, mapper=bwa
+
+    Error in rule map2reference:
+        jobid: 2
+        output: tmp/CH2500/bwa.raw.bam
+
+RuleException:
+CalledProcessError in line 42 of /net/sgi/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v3/cwl_practice.smk:
+Command ' set -euo pipefail;  bwa mem -v 2 -M -t 16 /net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v3/data/reference/RefCln_UCBPP-PA14.fa data/strains/dna/CH2500_1.fq.gz data/strains/dna/CH2500_2.fq.gz| samtools view -b -@ 16 > tmp/CH2500/bwa.raw.bam ;samtools index tmp/CH2500/bwa.raw.bam ' returned non-zero exit status 1.
+  File "/net/sgi/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v3/cwl_practice.smk", line 42, in __rule_map2reference
+  File "/home/thkuo/miniconda3/envs/phypal/lib/python3.6/concurrent/futures/thread.py", line 55, in run
+Removing output files of failed job map2reference since they might be corrupted:
+tmp/CH2500/bwa.raw.bam
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /net/sgi/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v3/.snakemake/log/2018-07-09T102010.176699.snakemake.log

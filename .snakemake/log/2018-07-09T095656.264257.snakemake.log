@@ -1,0 +1,5 @@
+Building DAG of jobs...
+MissingInputException in line 214 of /net/sgi/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v3/seq2geno.smk:
+Missing input files for rule make_assembly:
+data/strains/CH2500_1.fq.gz
+data/strains/CH2500_2.fq.gz
