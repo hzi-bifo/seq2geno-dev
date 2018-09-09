@@ -1,0 +1,40 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	a
+	1	all
+	1	b
+	3
+
+[Thu Sep  6 17:17:27 2018]
+rule a:
+    input: test.smk
+    output: test.txt, pyVersion1
+    jobid: 2
+
+[Thu Sep  6 17:17:28 2018]
+Finished job 2.
+1 of 3 steps (33%) done
+
+[Thu Sep  6 17:17:28 2018]
+rule b:
+    input: test.txt
+    output: pyVersion2
+    jobid: 1
+
+[Thu Sep  6 17:17:28 2018]
+Finished job 1.
+2 of 3 steps (67%) done
+
+[Thu Sep  6 17:17:28 2018]
+localrule all:
+    input: pyVersion2
+    jobid: 0
+
+[Thu Sep  6 17:17:28 2018]
+Finished job 0.
+3 of 3 steps (100%) done
+Complete log: /net/sgi/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/.snakemake/log/2018-09-06T171727.371748.snakemake.log

@@ -1,0 +1,2 @@
+SyntaxError in line 11 of /net/sgi/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/test.smk:
+Command must be given as string after the shell keyword. (test.smk, line 11)
