@@ -4,7 +4,7 @@ library(apeglm)
 
 source('seq2geno.MatIO.R')
 
-####
+#####
 ## Updates:
 ## Generalized for seq2geno
 ## Note that the input matrix of DESeq2 should have strains in COLUMNS
@@ -51,25 +51,25 @@ samples_df<- read_Seq2geno.tab(samples_f, na.value= '')
 ### start DESeq2
 for (target_col in colnames(samples_df)){
 
-  ## create colData
-  col_df<- data.frame(sample=target_samples, pheno= samples_df[target_samples, target_col])
-  
-  rownames(col_df)<- target_samples
-  dds<-DESeqDataSetFromMatrix(countData = rpg_mat.T,
-                              colData = col_df, 
-                              design = ~pheno) 
-
-  # determine the reference class
-  dds$pheno<- relevel(dds$pheno, ref= '1')
-
-  # start the analysis
-  register(MulticoreParam(cpu_num))
-  dds <- DESeq(dds, parallel= T)
-  resultsNames(dds)
-  res <- results(dds)
-  res_filtered <- subset(res, (padj < alpha_cutoff) & (abs(log2FoldChange)>= lfc_cutoff))
-
-  out_f<- paste(target_col, '_deseq2.txt', collapse= '')
-  out_f<- paste(output_dir, out_f, collapse= '/')
-  write.csv(as.data.frame(res_filtered), file=out_f)
+    ## create colData
+    col_df<- data.frame(sample=target_samples, pheno= samples_df[target_samples, target_col])
+    
+    rownames(col_df)<- target_samples
+    dds<-DESeqDataSetFromMatrix(countData = rpg_mat.T,
+    colData = col_df, 
+    design = ~pheno) 
+    
+    # determine the reference class
+    dds$pheno<- relevel(dds$pheno, ref= '1')
+    
+    # start the analysis
+    register(MulticoreParam(cpu_num))
+    dds <- DESeq(dds, parallel= T)
+    resultsNames(dds)
+    res <- results(dds)
+    res_filtered <- subset(res, (padj < alpha_cutoff) & (abs(log2FoldChange)>= lfc_cutoff))
+    
+    out_f<- paste(target_col, '_deseq2.txt', collapse= '')
+    out_f<- paste(output_dir, out_f, collapse= '/')
+    write.csv(as.data.frame(res_filtered), file=out_f)
 }
