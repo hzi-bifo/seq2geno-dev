@@ -1,0 +1,236 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	1	all_snps_list
+	5681	aln_to_vcf_per_fam
+	3	compress_feat_table
+	1	covert_snps_table
+	1	create_and_make_expr_table
+	1	create_indel_table
+	1	expand_by_family
+	10	gene_counts
+	1	nonsyn_snps_table
+	1	syn_snps_table
+	5681	vcf_to_indels_per_fam
+	1	write_dict_file
+	11384
+
+[Wed Sep 12 11:44:28 2018]
+rule all_snps_list:
+    input: seq2geno_temp/CH2500/bwa/st_variant.fltcnt, seq2geno_temp/CH2502/bwa/st_variant.fltcnt, seq2geno_temp/CH2522/bwa/st_variant.fltcnt, seq2geno_temp/F1659/bwa/st_variant.fltcnt, seq2geno_temp/ESP088/bwa/st_variant.fltcnt, seq2geno_temp/MHH15083/bwa/st_variant.fltcnt, seq2geno_temp/F2167/bwa/st_variant.fltcnt, seq2geno_temp/F2097/bwa/st_variant.fltcnt, seq2geno_temp/MHH14911/bwa/st_variant.fltcnt, seq2geno_temp/MHH15103/bwa/st_variant.fltcnt, seq2geno_temp/CH2500/bwa/st_variant.snp-vcf, seq2geno_temp/CH2502/bwa/st_variant.snp-vcf, seq2geno_temp/CH2522/bwa/st_variant.snp-vcf, seq2geno_temp/F1659/bwa/st_variant.snp-vcf, seq2geno_temp/ESP088/bwa/st_variant.snp-vcf, seq2geno_temp/MHH15083/bwa/st_variant.snp-vcf, seq2geno_temp/F2167/bwa/st_variant.snp-vcf, seq2geno_temp/F2097/bwa/st_variant.snp-vcf, seq2geno_temp/MHH14911/bwa/st_variant.snp-vcf, seq2geno_temp/MHH15103/bwa/st_variant.snp-vcf, CH2500.flatcount, CH2502.flatcount, CH2522.flatcount, F1659.flatcount, ESP088.flatcount, MHH15083.flatcount, F2167.flatcount, F2097.flatcount, MHH14911.flatcount, MHH15103.flatcount, CH2500.flt.vcf, CH2502.flt.vcf, CH2522.flt.vcf, F1659.flt.vcf, ESP088.flt.vcf, MHH15083.flt.vcf, F2167.flt.vcf, F2097.flt.vcf, MHH14911.flt.vcf, MHH15103.flt.vcf, dict.txt, annotations_for_snps.tab
+    output: seq2geno_temp/DNA_Pool1_final.tab
+    jobid: 27
+
+[Wed Sep 12 12:01:25 2018]
+Finished job 27.
+1 of 11384 steps (0.01%) done
+
+[Wed Sep 12 12:01:25 2018]
+rule gene_counts:
+    input: seq2geno_temp/F1659/rna_sorted.rmdup.sin, annotations_for_snps.tab
+    output: seq2geno_temp/F1659/rna_sorted.rmdup.rpg
+    jobid: 22
+    wildcards: TMP_D=seq2geno_temp, strain=F1659
+
+[Wed Sep 12 12:01:34 2018]
+Finished job 22.
+2 of 11384 steps (0.02%) done
+
+[Wed Sep 12 12:01:34 2018]
+rule gene_counts:
+    input: seq2geno_temp/CH2522/rna_sorted.rmdup.sin, annotations_for_snps.tab
+    output: seq2geno_temp/CH2522/rna_sorted.rmdup.rpg
+    jobid: 19
+    wildcards: TMP_D=seq2geno_temp, strain=CH2522
+
+[Wed Sep 12 12:01:42 2018]
+Finished job 19.
+3 of 11384 steps (0.03%) done
+
+[Wed Sep 12 12:01:42 2018]
+rule gene_counts:
+    input: seq2geno_temp/MHH15083/rna_sorted.rmdup.sin, annotations_for_snps.tab
+    output: seq2geno_temp/MHH15083/rna_sorted.rmdup.rpg
+    jobid: 24
+    wildcards: TMP_D=seq2geno_temp, strain=MHH15083
+
+[Wed Sep 12 12:01:50 2018]
+Finished job 24.
+4 of 11384 steps (0.04%) done
+
+[Wed Sep 12 12:01:50 2018]
+rule gene_counts:
+    input: seq2geno_temp/MHH15103/rna_sorted.rmdup.sin, annotations_for_snps.tab
+    output: seq2geno_temp/MHH15103/rna_sorted.rmdup.rpg
+    jobid: 26
+    wildcards: TMP_D=seq2geno_temp, strain=MHH15103
+
+[Wed Sep 12 12:01:58 2018]
+Finished job 26.
+5 of 11384 steps (0.04%) done
+
+[Wed Sep 12 12:01:58 2018]
+rule gene_counts:
+    input: seq2geno_temp/F2167/rna_sorted.rmdup.sin, annotations_for_snps.tab
+    output: seq2geno_temp/F2167/rna_sorted.rmdup.rpg
+    jobid: 21
+    wildcards: TMP_D=seq2geno_temp, strain=F2167
+
+[Wed Sep 12 12:02:06 2018]
+Finished job 21.
+6 of 11384 steps (0.05%) done
+
+[Wed Sep 12 12:02:06 2018]
+rule gene_counts:
+    input: seq2geno_temp/MHH14911/rna_sorted.rmdup.sin, annotations_for_snps.tab
+    output: seq2geno_temp/MHH14911/rna_sorted.rmdup.rpg
+    jobid: 20
+    wildcards: TMP_D=seq2geno_temp, strain=MHH14911
+
+[Wed Sep 12 12:02:14 2018]
+Finished job 20.
+7 of 11384 steps (0.06%) done
+
+[Wed Sep 12 12:02:14 2018]
+rule gene_counts:
+    input: seq2geno_temp/CH2502/rna_sorted.rmdup.sin, annotations_for_snps.tab
+    output: seq2geno_temp/CH2502/rna_sorted.rmdup.rpg
+    jobid: 18
+    wildcards: TMP_D=seq2geno_temp, strain=CH2502
+
+[Wed Sep 12 12:02:22 2018]
+Finished job 18.
+8 of 11384 steps (0.07%) done
+
+[Wed Sep 12 12:02:22 2018]
+rule gene_counts:
+    input: seq2geno_temp/CH2500/rna_sorted.rmdup.sin, annotations_for_snps.tab
+    output: seq2geno_temp/CH2500/rna_sorted.rmdup.rpg
+    jobid: 23
+    wildcards: TMP_D=seq2geno_temp, strain=CH2500
+
+[Wed Sep 12 12:02:29 2018]
+Finished job 23.
+9 of 11384 steps (0.08%) done
+
+[Wed Sep 12 12:02:29 2018]
+rule gene_counts:
+    input: seq2geno_temp/F2097/rna_sorted.rmdup.sin, annotations_for_snps.tab
+    output: seq2geno_temp/F2097/rna_sorted.rmdup.rpg
+    jobid: 25
+    wildcards: TMP_D=seq2geno_temp, strain=F2097
+
+[Wed Sep 12 12:02:37 2018]
+Finished job 25.
+10 of 11384 steps (0.09%) done
+
+[Wed Sep 12 12:02:37 2018]
+rule nonsyn_snps_table:
+    input: seq2geno_temp/DNA_Pool1_final.tab, /net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/data/reference/RefCln_UCBPP-PA14.gbk
+    output: seq2geno_temp/non-syn_SNPs.tab
+    jobid: 13
+
+[Wed Sep 12 12:06:11 2018]
+Finished job 13.
+11 of 11384 steps (0.10%) done
+
+[Wed Sep 12 12:06:11 2018]
+rule syn_snps_table:
+    input: seq2geno_temp/DNA_Pool1_final.tab, /net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/data/reference/RefCln_UCBPP-PA14.gbk
+    output: seq2geno_temp/syn_SNPs.tab
+    jobid: 12
+
+[Wed Sep 12 12:09:48 2018]
+Finished job 12.
+12 of 11384 steps (0.11%) done
+
+[Wed Sep 12 12:09:48 2018]
+rule gene_counts:
+    input: seq2geno_temp/ESP088/rna_sorted.rmdup.sin, annotations_for_snps.tab
+    output: seq2geno_temp/ESP088/rna_sorted.rmdup.rpg
+    jobid: 17
+    wildcards: TMP_D=seq2geno_temp, strain=ESP088
+
+[Wed Sep 12 12:09:55 2018]
+Finished job 17.
+13 of 11384 steps (0.11%) done
+
+[Wed Sep 12 12:09:55 2018]
+rule covert_snps_table:
+    input: seq2geno_temp/non-syn_SNPs.tab, seq2geno_temp/syn_SNPs.tab
+    output: /net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/results/nonsyn_snps.tab, /net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/results/syn_snps.tab
+    jobid: 3
+
+[Wed Sep 12 12:11:35 2018]
+Finished job 3.
+14 of 11384 steps (0.12%) done
+
+[Wed Sep 12 12:11:35 2018]
+rule compress_feat_table:
+    input: /net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/results/syn_snps.tab
+    output: /net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/results/syn_snps.tab_GROUPS, /net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/results/syn_snps.tab_NON-RDNT
+    jobid: 5
+    wildcards: prefix=/net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/results/syn_snps.tab
+
+[Wed Sep 12 12:11:57 2018]
+Finished job 5.
+15 of 11384 steps (0.13%) done
+
+[Wed Sep 12 12:11:57 2018]
+rule compress_feat_table:
+    input: /net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/results/nonsyn_snps.tab
+    output: /net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/results/nonsyn_snps.tab_GROUPS, /net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/results/nonsyn_snps.tab_NON-RDNT
+    jobid: 7
+    wildcards: prefix=/net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/results/nonsyn_snps.tab
+
+[Wed Sep 12 12:12:06 2018]
+Finished job 7.
+16 of 11384 steps (0.14%) done
+
+[Wed Sep 12 12:12:06 2018]
+rule write_dict_file:
+    input: seq2geno_temp/CH2500/rna_sorted.rmdup.rpg, seq2geno_temp/CH2502/rna_sorted.rmdup.rpg, seq2geno_temp/CH2522/rna_sorted.rmdup.rpg, seq2geno_temp/F1659/rna_sorted.rmdup.rpg, seq2geno_temp/ESP088/rna_sorted.rmdup.rpg, seq2geno_temp/MHH15083/rna_sorted.rmdup.rpg, seq2geno_temp/F2167/rna_sorted.rmdup.rpg, seq2geno_temp/F2097/rna_sorted.rmdup.rpg, seq2geno_temp/MHH14911/rna_sorted.rmdup.rpg, seq2geno_temp/MHH15103/rna_sorted.rmdup.rpg
+    output: seq2geno_temp/rpg_dict
+    jobid: 10
+
+[Wed Sep 12 12:12:06 2018]
+Finished job 10.
+17 of 11384 steps (0.15%) done
+
+[Wed Sep 12 12:12:07 2018]
+rule create_and_make_expr_table:
+    input: seq2geno_temp/rpg_dict, annotations_for_expr.tab
+    output: /net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/results/expr.tab
+    jobid: 1
+
+[Wed Sep 12 12:12:08 2018]
+Finished job 1.
+18 of 11384 steps (0.16%) done
+
+[Wed Sep 12 12:12:08 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/lgrB_4.aln
+    output: seq2geno_temp/extracted_proteins_nt/lgrB_4.vcf
+    jobid: 11457
+    wildcards: fam=lgrB_4
+
+    [Wed Sep 12 12:12:08 2018]
+    Error in rule aln_to_vcf_per_fam:
+        jobid: 11457
+        output: seq2geno_temp/extracted_proteins_nt/lgrB_4.vcf
+
+RuleException:
+CalledProcessError in line 28 of /net/sgi/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/CREATE_INDEL_TABLE.smk:
+Command ' set -euo pipefail;  
+        java -jar lib/jvarkit/dist/msa2vcf.jar         < seq2geno_temp/extracted_proteins_nt/lgrB_4.aln > seq2geno_temp/extracted_proteins_nt/lgrB_4.vcf ' returned non-zero exit status 1.
+  File "/net/sgi/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/CREATE_INDEL_TABLE.smk", line 28, in __rule_aln_to_vcf_per_fam
+  File "/home/thkuo/miniconda3/envs/seq2geno/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+Removing output files of failed job aln_to_vcf_per_fam since they might be corrupted:
+seq2geno_temp/extracted_proteins_nt/lgrB_4.vcf
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /net/sgi/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/.snakemake/log/2018-09-12T114115.856141.snakemake.log

@@ -20,7 +20,7 @@ print(dict_file)
 #annotation <- read.table("/data/reference_sequences/Pseudomonas_aeruginosa_PA14_R_annotation",header=TRUE,row.names=1)
 #annotation <- read.table("/data/reference_sequences/Pseudomonas_aeruginosa_PAO1_R_annotation",header=TRUE,row.names=1)
 #annotation <- read.table("R_annotation_Denitsas_TSS.tab",header=TRUE,row.names=1)
-annotation <- read.table(anno_file,header=TRUE,row.names=1)
+annotation <- read.table(anno_file,header=TRUE, sep='\t', stringsAsFactors=F) 
 
 # set path
 #path <- "/data2/RNA-seq/transcriptome_c-di-GMP/01_2013/"

@@ -1,0 +1,10 @@
+CH2500	-inf
+CH2502	-inf
+CH2522	-inf
+ESP088	-inf
+F1659	-inf
+F2097	-inf
+F2167	-inf
+MHH14911	-inf
+MHH15083	-inf
+MHH15103	-inf

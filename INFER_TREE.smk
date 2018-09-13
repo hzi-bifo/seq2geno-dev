@@ -61,4 +61,4 @@ rule create_coding_regions_aln:
         CORES=CORES, 
         TMP_D=TMP_D+"/families", 
         STRAINS=STRAINS 
-    script: 'makeAlignment.py'
+    script: 'lib/makeAlignment.py'

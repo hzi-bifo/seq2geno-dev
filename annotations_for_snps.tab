@@ -2520,7 +2520,7 @@ Paeruginosa	NC_008463	Chromosome	PA14_30810	gene	2671833	2672982	+	alkB1
 Paeruginosa	NC_008463	Chromosome	PA14_30820	gene	2673093	2674701	+	.
 Paeruginosa	NC_008463	Chromosome	PA14_30830	gene	2674711	2676055	-	.
 Paeruginosa	NC_008463	Chromosome	PA14_30840	gene	2676131	2677544	+	.
-Paeruginosa	NC_008463	Chromosome	PA2570.1	gene	2677657	2677701	+	.
+Paeruginosa	NC_008463	Chromosome	PA2570.1a	gene	2677657	2677701	+	.
 Paeruginosa	NC_008463	Chromosome	PA14_30850	gene	2678434	2679706	-	trbI
 Paeruginosa	NC_008463	Chromosome	PA14_30860	gene	2679708	2680698	-	trbG
 Paeruginosa	NC_008463	Chromosome	PA14_30870	gene	2680694	2681399	-	trbF
@@ -2560,7 +2560,7 @@ Paeruginosa	NC_008463	Chromosome	PA14_31250	gene	2717345	2717738	-	.
 Paeruginosa	NC_008463	Chromosome	PA14_31260	gene	2718014	2718521	-	.
 Paeruginosa	NC_008463	Chromosome	PA14_31270	gene	2718847	2720011	-	.
 Paeruginosa	NC_008463	Chromosome	PA14_31280	gene	2720007	2721213	-	.
-Paeruginosa	NC_008463	Chromosome	PA2570.1	gene	2721390	2721445	+	.
+Paeruginosa	NC_008463	Chromosome	PA2570.1b	gene	2721390	2721445	+	.
 Paeruginosa	NC_008463	Chromosome	PA14_31290	gene	2721860	2722229	+	pa1L
 Paeruginosa	NC_008463	Chromosome	PA14_31300	gene	2722502	2722844	+	.
 Paeruginosa	NC_008463	Chromosome	PA14_31310	gene	2722962	2723370	+	.

@@ -69,3 +69,662 @@ rule all_snps_list:
     output: seq2geno_temp/DNA_Pool1_final.tab
     jobid: 38
 
+[Mon Sep 10 10:13:16 2018]
+Finished job 38.
+4 of 74 steps (5%) done
+
+[Mon Sep 10 10:13:16 2018]
+rule gene_counts:
+    input: seq2geno_temp/F1659/rna_sorted.rmdup.sin, annotations_for_snps.tab
+    output: seq2geno_temp/F1659/rna_sorted.rmdup.rpg
+    jobid: 28
+    wildcards: TMP_D=seq2geno_temp, strain=F1659
+
+[Mon Sep 10 10:13:24 2018]
+Finished job 28.
+5 of 74 steps (7%) done
+
+[Mon Sep 10 10:13:25 2018]
+rule gene_counts:
+    input: seq2geno_temp/CH2522/rna_sorted.rmdup.sin, annotations_for_snps.tab
+    output: seq2geno_temp/CH2522/rna_sorted.rmdup.rpg
+    jobid: 37
+    wildcards: TMP_D=seq2geno_temp, strain=CH2522
+
+[Mon Sep 10 10:13:33 2018]
+Finished job 37.
+6 of 74 steps (8%) done
+
+[Mon Sep 10 10:13:33 2018]
+rule gene_counts:
+    input: seq2geno_temp/MHH15083/rna_sorted.rmdup.sin, annotations_for_snps.tab
+    output: seq2geno_temp/MHH15083/rna_sorted.rmdup.rpg
+    jobid: 36
+    wildcards: TMP_D=seq2geno_temp, strain=MHH15083
+
+[Mon Sep 10 10:13:41 2018]
+Finished job 36.
+7 of 74 steps (9%) done
+
+[Mon Sep 10 10:13:41 2018]
+rule gene_counts:
+    input: seq2geno_temp/MHH15103/rna_sorted.rmdup.sin, annotations_for_snps.tab
+    output: seq2geno_temp/MHH15103/rna_sorted.rmdup.rpg
+    jobid: 32
+    wildcards: TMP_D=seq2geno_temp, strain=MHH15103
+
+[Mon Sep 10 10:13:48 2018]
+Finished job 32.
+8 of 74 steps (11%) done
+
+[Mon Sep 10 10:13:48 2018]
+rule gene_counts:
+    input: seq2geno_temp/F2167/rna_sorted.rmdup.sin, annotations_for_snps.tab
+    output: seq2geno_temp/F2167/rna_sorted.rmdup.rpg
+    jobid: 29
+    wildcards: TMP_D=seq2geno_temp, strain=F2167
+
+[Mon Sep 10 10:13:56 2018]
+Finished job 29.
+9 of 74 steps (12%) done
+
+[Mon Sep 10 10:13:56 2018]
+rule gene_counts:
+    input: seq2geno_temp/MHH14911/rna_sorted.rmdup.sin, annotations_for_snps.tab
+    output: seq2geno_temp/MHH14911/rna_sorted.rmdup.rpg
+    jobid: 35
+    wildcards: TMP_D=seq2geno_temp, strain=MHH14911
+
+[Mon Sep 10 10:14:04 2018]
+Finished job 35.
+10 of 74 steps (14%) done
+
+[Mon Sep 10 10:14:04 2018]
+rule gene_counts:
+    input: seq2geno_temp/CH2502/rna_sorted.rmdup.sin, annotations_for_snps.tab
+    output: seq2geno_temp/CH2502/rna_sorted.rmdup.rpg
+    jobid: 31
+    wildcards: TMP_D=seq2geno_temp, strain=CH2502
+
+[Mon Sep 10 10:14:12 2018]
+Finished job 31.
+11 of 74 steps (15%) done
+
+[Mon Sep 10 10:14:12 2018]
+rule gene_counts:
+    input: seq2geno_temp/CH2500/rna_sorted.rmdup.sin, annotations_for_snps.tab
+    output: seq2geno_temp/CH2500/rna_sorted.rmdup.rpg
+    jobid: 30
+    wildcards: TMP_D=seq2geno_temp, strain=CH2500
+
+[Mon Sep 10 10:14:19 2018]
+Finished job 30.
+12 of 74 steps (16%) done
+
+[Mon Sep 10 10:14:19 2018]
+rule gene_counts:
+    input: seq2geno_temp/F2097/rna_sorted.rmdup.sin, annotations_for_snps.tab
+    output: seq2geno_temp/F2097/rna_sorted.rmdup.rpg
+    jobid: 33
+    wildcards: TMP_D=seq2geno_temp, strain=F2097
+
+[Mon Sep 10 10:14:26 2018]
+Finished job 33.
+13 of 74 steps (18%) done
+
+[Mon Sep 10 10:14:26 2018]
+rule nonsyn_snps_table:
+    input: seq2geno_temp/DNA_Pool1_final.tab, /net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/data/reference/RefCln_UCBPP-PA14.gbk
+    output: seq2geno_temp/non-syn_SNPs.tab
+    jobid: 15
+
+[Mon Sep 10 10:18:02 2018]
+Finished job 15.
+14 of 74 steps (19%) done
+
+[Mon Sep 10 10:18:02 2018]
+rule syn_snps_table:
+    input: seq2geno_temp/DNA_Pool1_final.tab, /net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/data/reference/RefCln_UCBPP-PA14.gbk
+    output: seq2geno_temp/syn_SNPs.tab
+    jobid: 14
+
+[Mon Sep 10 10:21:41 2018]
+Finished job 14.
+15 of 74 steps (20%) done
+
+[Mon Sep 10 10:21:41 2018]
+rule gene_counts:
+    input: seq2geno_temp/ESP088/rna_sorted.rmdup.sin, annotations_for_snps.tab
+    output: seq2geno_temp/ESP088/rna_sorted.rmdup.rpg
+    jobid: 34
+    wildcards: TMP_D=seq2geno_temp, strain=ESP088
+
+[Mon Sep 10 10:21:48 2018]
+Finished job 34.
+16 of 74 steps (22%) done
+
+[Mon Sep 10 10:21:48 2018]
+rule covert_snps_table:
+    input: seq2geno_temp/non-syn_SNPs.tab, seq2geno_temp/syn_SNPs.tab
+    output: /net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/results/nonsyn_snps.tab, /net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/results/syn_snps.tab
+    jobid: 5
+
+[Mon Sep 10 10:23:28 2018]
+Finished job 5.
+17 of 74 steps (23%) done
+
+[Mon Sep 10 10:23:28 2018]
+rule create_gff:
+    input: seq2geno_temp/ESP088/spades/scaffolds.fasta
+    output: seq2geno_temp/ESP088/spades/prokka/de_novo.ffn, seq2geno_temp/ESP088/spades/prokka/de_novo.gff
+    jobid: 47
+    wildcards: TMP_D=seq2geno_temp, strain=ESP088, assembler=spades, annotator=prokka
+
+[Mon Sep 10 10:26:07 2018]
+Finished job 47.
+18 of 74 steps (24%) done
+
+[Mon Sep 10 10:26:07 2018]
+rule duplicate_gffs:
+    input: seq2geno_temp/ESP088/spades/prokka/de_novo.gff
+    output: seq2geno_temp/ESP088/spades/prokka/ESP088.gff
+    jobid: 24
+    wildcards: TMP_D=seq2geno_temp, strain=ESP088, assembler=spades, annotator=prokka
+
+[Mon Sep 10 10:26:07 2018]
+Finished job 24.
+19 of 74 steps (26%) done
+
+[Mon Sep 10 10:26:07 2018]
+rule create_gff:
+    input: seq2geno_temp/CH2500/spades/scaffolds.fasta
+    output: seq2geno_temp/CH2500/spades/prokka/de_novo.ffn, seq2geno_temp/CH2500/spades/prokka/de_novo.gff
+    jobid: 48
+    wildcards: TMP_D=seq2geno_temp, strain=CH2500, assembler=spades, annotator=prokka
+
+[Mon Sep 10 10:28:39 2018]
+Finished job 48.
+20 of 74 steps (27%) done
+
+[Mon Sep 10 10:28:39 2018]
+rule duplicate_gffs:
+    input: seq2geno_temp/CH2500/spades/prokka/de_novo.gff
+    output: seq2geno_temp/CH2500/spades/prokka/CH2500.gff
+    jobid: 25
+    wildcards: TMP_D=seq2geno_temp, strain=CH2500, assembler=spades, annotator=prokka
+
+[Mon Sep 10 10:28:39 2018]
+Finished job 25.
+21 of 74 steps (28%) done
+
+[Mon Sep 10 10:28:39 2018]
+rule create_gff:
+    input: seq2geno_temp/MHH15083/spades/scaffolds.fasta
+    output: seq2geno_temp/MHH15083/spades/prokka/de_novo.ffn, seq2geno_temp/MHH15083/spades/prokka/de_novo.gff
+    jobid: 41
+    wildcards: TMP_D=seq2geno_temp, strain=MHH15083, assembler=spades, annotator=prokka
+
+[Mon Sep 10 10:31:04 2018]
+Finished job 41.
+22 of 74 steps (30%) done
+
+[Mon Sep 10 10:31:04 2018]
+rule duplicate_gffs:
+    input: seq2geno_temp/MHH15083/spades/prokka/de_novo.gff
+    output: seq2geno_temp/MHH15083/spades/prokka/MHH15083.gff
+    jobid: 18
+    wildcards: TMP_D=seq2geno_temp, strain=MHH15083, assembler=spades, annotator=prokka
+
+[Mon Sep 10 10:31:05 2018]
+Finished job 18.
+23 of 74 steps (31%) done
+
+[Mon Sep 10 10:31:05 2018]
+rule create_gff:
+    input: seq2geno_temp/F1659/spades/scaffolds.fasta
+    output: seq2geno_temp/F1659/spades/prokka/de_novo.ffn, seq2geno_temp/F1659/spades/prokka/de_novo.gff
+    jobid: 45
+    wildcards: TMP_D=seq2geno_temp, strain=F1659, assembler=spades, annotator=prokka
+
+[Mon Sep 10 10:33:28 2018]
+Finished job 45.
+24 of 74 steps (32%) done
+
+[Mon Sep 10 10:33:28 2018]
+rule duplicate_gffs:
+    input: seq2geno_temp/F1659/spades/prokka/de_novo.gff
+    output: seq2geno_temp/F1659/spades/prokka/F1659.gff
+    jobid: 22
+    wildcards: TMP_D=seq2geno_temp, strain=F1659, assembler=spades, annotator=prokka
+
+[Mon Sep 10 10:33:28 2018]
+Finished job 22.
+25 of 74 steps (34%) done
+
+[Mon Sep 10 10:33:28 2018]
+rule create_gff:
+    input: seq2geno_temp/F2097/spades/scaffolds.fasta
+    output: seq2geno_temp/F2097/spades/prokka/de_novo.ffn, seq2geno_temp/F2097/spades/prokka/de_novo.gff
+    jobid: 40
+    wildcards: TMP_D=seq2geno_temp, strain=F2097, assembler=spades, annotator=prokka
+
+[Mon Sep 10 10:35:53 2018]
+Finished job 40.
+26 of 74 steps (35%) done
+
+[Mon Sep 10 10:35:53 2018]
+rule duplicate_gffs:
+    input: seq2geno_temp/F2097/spades/prokka/de_novo.gff
+    output: seq2geno_temp/F2097/spades/prokka/F2097.gff
+    jobid: 17
+    wildcards: TMP_D=seq2geno_temp, strain=F2097, assembler=spades, annotator=prokka
+
+[Mon Sep 10 10:35:53 2018]
+Finished job 17.
+27 of 74 steps (36%) done
+
+[Mon Sep 10 10:35:53 2018]
+rule create_gff:
+    input: seq2geno_temp/F2167/spades/scaffolds.fasta
+    output: seq2geno_temp/F2167/spades/prokka/de_novo.ffn, seq2geno_temp/F2167/spades/prokka/de_novo.gff
+    jobid: 43
+    wildcards: TMP_D=seq2geno_temp, strain=F2167, assembler=spades, annotator=prokka
+
+[Mon Sep 10 10:38:12 2018]
+Finished job 43.
+28 of 74 steps (38%) done
+
+[Mon Sep 10 10:38:12 2018]
+rule duplicate_gffs:
+    input: seq2geno_temp/F2167/spades/prokka/de_novo.gff
+    output: seq2geno_temp/F2167/spades/prokka/F2167.gff
+    jobid: 20
+    wildcards: TMP_D=seq2geno_temp, strain=F2167, assembler=spades, annotator=prokka
+
+[Mon Sep 10 10:38:12 2018]
+Finished job 20.
+29 of 74 steps (39%) done
+
+[Mon Sep 10 10:38:12 2018]
+rule create_gff:
+    input: seq2geno_temp/CH2502/spades/scaffolds.fasta
+    output: seq2geno_temp/CH2502/spades/prokka/de_novo.ffn, seq2geno_temp/CH2502/spades/prokka/de_novo.gff
+    jobid: 44
+    wildcards: TMP_D=seq2geno_temp, strain=CH2502, assembler=spades, annotator=prokka
+
+[Mon Sep 10 10:40:43 2018]
+Finished job 44.
+30 of 74 steps (41%) done
+
+[Mon Sep 10 10:40:43 2018]
+rule duplicate_gffs:
+    input: seq2geno_temp/CH2502/spades/prokka/de_novo.gff
+    output: seq2geno_temp/CH2502/spades/prokka/CH2502.gff
+    jobid: 21
+    wildcards: TMP_D=seq2geno_temp, strain=CH2502, assembler=spades, annotator=prokka
+
+[Mon Sep 10 10:40:43 2018]
+Finished job 21.
+31 of 74 steps (42%) done
+
+[Mon Sep 10 10:40:43 2018]
+rule create_gff:
+    input: seq2geno_temp/MHH15103/spades/scaffolds.fasta
+    output: seq2geno_temp/MHH15103/spades/prokka/de_novo.ffn, seq2geno_temp/MHH15103/spades/prokka/de_novo.gff
+    jobid: 42
+    wildcards: TMP_D=seq2geno_temp, strain=MHH15103, assembler=spades, annotator=prokka
+
+[Mon Sep 10 10:43:01 2018]
+Finished job 42.
+32 of 74 steps (43%) done
+
+[Mon Sep 10 10:43:01 2018]
+rule duplicate_gffs:
+    input: seq2geno_temp/MHH15103/spades/prokka/de_novo.gff
+    output: seq2geno_temp/MHH15103/spades/prokka/MHH15103.gff
+    jobid: 19
+    wildcards: TMP_D=seq2geno_temp, strain=MHH15103, assembler=spades, annotator=prokka
+
+[Mon Sep 10 10:43:01 2018]
+Finished job 19.
+33 of 74 steps (45%) done
+
+[Mon Sep 10 10:43:01 2018]
+rule create_gff:
+    input: seq2geno_temp/MHH14911/spades/scaffolds.fasta
+    output: seq2geno_temp/MHH14911/spades/prokka/de_novo.ffn, seq2geno_temp/MHH14911/spades/prokka/de_novo.gff
+    jobid: 49
+    wildcards: TMP_D=seq2geno_temp, strain=MHH14911, assembler=spades, annotator=prokka
+
+[Mon Sep 10 10:45:17 2018]
+Finished job 49.
+34 of 74 steps (46%) done
+
+[Mon Sep 10 10:45:17 2018]
+rule duplicate_gffs:
+    input: seq2geno_temp/MHH14911/spades/prokka/de_novo.gff
+    output: seq2geno_temp/MHH14911/spades/prokka/MHH14911.gff
+    jobid: 26
+    wildcards: TMP_D=seq2geno_temp, strain=MHH14911, assembler=spades, annotator=prokka
+
+[Mon Sep 10 10:45:17 2018]
+Finished job 26.
+35 of 74 steps (47%) done
+
+[Mon Sep 10 10:45:17 2018]
+rule create_gff:
+    input: seq2geno_temp/CH2522/spades/scaffolds.fasta
+    output: seq2geno_temp/CH2522/spades/prokka/de_novo.ffn, seq2geno_temp/CH2522/spades/prokka/de_novo.gff
+    jobid: 46
+    wildcards: TMP_D=seq2geno_temp, strain=CH2522, assembler=spades, annotator=prokka
+
+[Mon Sep 10 10:47:36 2018]
+Finished job 46.
+36 of 74 steps (49%) done
+
+[Mon Sep 10 10:47:36 2018]
+rule duplicate_gffs:
+    input: seq2geno_temp/CH2522/spades/prokka/de_novo.gff
+    output: seq2geno_temp/CH2522/spades/prokka/CH2522.gff
+    jobid: 23
+    wildcards: TMP_D=seq2geno_temp, strain=CH2522, assembler=spades, annotator=prokka
+
+[Mon Sep 10 10:47:36 2018]
+Finished job 23.
+37 of 74 steps (50%) done
+
+[Mon Sep 10 10:47:36 2018]
+rule compute_gpa_raw_table:
+    input: seq2geno_temp/CH2500/spades/prokka/CH2500.gff, seq2geno_temp/CH2502/spades/prokka/CH2502.gff, seq2geno_temp/CH2522/spades/prokka/CH2522.gff, seq2geno_temp/F1659/spades/prokka/F1659.gff, seq2geno_temp/ESP088/spades/prokka/ESP088.gff, seq2geno_temp/MHH15083/spades/prokka/MHH15083.gff, seq2geno_temp/F2167/spades/prokka/F2167.gff, seq2geno_temp/F2097/spades/prokka/F2097.gff, seq2geno_temp/MHH14911/spades/prokka/MHH14911.gff, seq2geno_temp/MHH15103/spades/prokka/MHH15103.gff
+    output: seq2geno_temp/roary/gene_presence_absence.csv, seq2geno_temp/roary/gene_presence_absence.Rtab
+    jobid: 10
+    wildcards: TMP_D=seq2geno_temp, gene_sorter=roary
+
+[Mon Sep 10 10:49:30 2018]
+Finished job 10.
+38 of 74 steps (51%) done
+
+[Mon Sep 10 10:49:30 2018]
+rule sort_gene_family:
+    input: seq2geno_temp/roary/gene_presence_absence.csv, seq2geno_temp/CH2500/spades/prokka/de_novo.ffn, seq2geno_temp/CH2502/spades/prokka/de_novo.ffn, seq2geno_temp/CH2522/spades/prokka/de_novo.ffn, seq2geno_temp/F1659/spades/prokka/de_novo.ffn, seq2geno_temp/ESP088/spades/prokka/de_novo.ffn, seq2geno_temp/MHH15083/spades/prokka/de_novo.ffn, seq2geno_temp/F2167/spades/prokka/de_novo.ffn, seq2geno_temp/F2097/spades/prokka/de_novo.ffn, seq2geno_temp/MHH14911/spades/prokka/de_novo.ffn, seq2geno_temp/MHH15103/spades/prokka/de_novo.ffn
+    output: seq2geno_temp/extracted_proteins_nt/{*}.aln (dynamic)
+    jobid: 165
+
+Subsequent jobs will be added dynamically depending on the output of this job
+Dynamically updating jobs
+[Mon Sep 10 12:52:21 2018]
+Finished job 165.
+39 of 11473 steps (0.34%) done
+
+[Mon Sep 10 12:52:22 2018]
+rule compress_feat_table:
+    input: /net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/results/syn_snps.tab
+    output: /net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/results/syn_snps.tab_GROUPS, /net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/results/syn_snps.tab_NON-RDNT
+    jobid: 8
+    wildcards: prefix=/net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/results/syn_snps.tab
+
+[Mon Sep 10 12:52:45 2018]
+Finished job 8.
+40 of 11473 steps (0.35%) done
+
+[Mon Sep 10 12:52:45 2018]
+rule index_vcf:
+    input: seq2geno_temp/MHH15083/bwa/vcf.gz
+    output: seq2geno_temp/MHH15083/bwa/vcf.gz.tbi
+    jobid: 124
+    wildcards: TMP_D=seq2geno_temp, strain=MHH15083, mapper=bwa
+
+[Mon Sep 10 12:52:46 2018]
+Finished job 124.
+41 of 11473 steps (0.36%) done
+
+[Mon Sep 10 12:52:46 2018]
+rule create_consensus_sequence:
+    input: seq2geno_temp/reference.target_regions.fa, seq2geno_temp/MHH15083/bwa/vcf.gz, seq2geno_temp/MHH15083/bwa/vcf.gz.tbi
+    output: seq2geno_temp/MHH15083/bwa/cons.fa
+    jobid: 55
+    wildcards: TMP_D=seq2geno_temp, strain=MHH15083, mapper=bwa
+
+[Mon Sep 10 12:53:07 2018]
+Finished job 55.
+42 of 11473 steps (0.37%) done
+
+[Mon Sep 10 12:53:07 2018]
+rule index_vcf:
+    input: seq2geno_temp/CH2522/bwa/vcf.gz
+    output: seq2geno_temp/CH2522/bwa/vcf.gz.tbi
+    jobid: 132
+    wildcards: TMP_D=seq2geno_temp, strain=CH2522, mapper=bwa
+
+[Mon Sep 10 12:53:08 2018]
+Finished job 132.
+43 of 11473 steps (0.37%) done
+
+[Mon Sep 10 12:53:08 2018]
+rule create_consensus_sequence:
+    input: seq2geno_temp/reference.target_regions.fa, seq2geno_temp/CH2522/bwa/vcf.gz, seq2geno_temp/CH2522/bwa/vcf.gz.tbi
+    output: seq2geno_temp/CH2522/bwa/cons.fa
+    jobid: 59
+    wildcards: TMP_D=seq2geno_temp, strain=CH2522, mapper=bwa
+
+[Mon Sep 10 12:53:24 2018]
+Finished job 59.
+44 of 11473 steps (0.38%) done
+
+[Mon Sep 10 12:53:24 2018]
+rule index_vcf:
+    input: seq2geno_temp/ESP088/bwa/vcf.gz
+    output: seq2geno_temp/ESP088/bwa/vcf.gz.tbi
+    jobid: 129
+    wildcards: TMP_D=seq2geno_temp, strain=ESP088, mapper=bwa
+
+[Mon Sep 10 12:53:24 2018]
+Finished job 129.
+45 of 11473 steps (0.39%) done
+
+[Mon Sep 10 12:53:24 2018]
+rule create_consensus_sequence:
+    input: seq2geno_temp/reference.target_regions.fa, seq2geno_temp/ESP088/bwa/vcf.gz, seq2geno_temp/ESP088/bwa/vcf.gz.tbi
+    output: seq2geno_temp/ESP088/bwa/cons.fa
+    jobid: 57
+    wildcards: TMP_D=seq2geno_temp, strain=ESP088, mapper=bwa
+
+[Mon Sep 10 12:53:46 2018]
+Finished job 57.
+46 of 11473 steps (0.40%) done
+
+[Mon Sep 10 12:53:46 2018]
+rule index_vcf:
+    input: seq2geno_temp/CH2502/bwa/vcf.gz
+    output: seq2geno_temp/CH2502/bwa/vcf.gz.tbi
+    jobid: 130
+    wildcards: TMP_D=seq2geno_temp, strain=CH2502, mapper=bwa
+
+[Mon Sep 10 12:53:46 2018]
+Finished job 130.
+47 of 11473 steps (0.41%) done
+
+[Mon Sep 10 12:53:47 2018]
+rule create_consensus_sequence:
+    input: seq2geno_temp/reference.target_regions.fa, seq2geno_temp/CH2502/bwa/vcf.gz, seq2geno_temp/CH2502/bwa/vcf.gz.tbi
+    output: seq2geno_temp/CH2502/bwa/cons.fa
+    jobid: 58
+    wildcards: TMP_D=seq2geno_temp, strain=CH2502, mapper=bwa
+
+[Mon Sep 10 12:54:08 2018]
+Finished job 58.
+48 of 11473 steps (0.42%) done
+
+[Mon Sep 10 12:54:08 2018]
+rule index_vcf:
+    input: seq2geno_temp/F1659/bwa/vcf.gz
+    output: seq2geno_temp/F1659/bwa/vcf.gz.tbi
+    jobid: 123
+    wildcards: TMP_D=seq2geno_temp, strain=F1659, mapper=bwa
+
+[Mon Sep 10 12:54:08 2018]
+Finished job 123.
+49 of 11473 steps (0.43%) done
+
+[Mon Sep 10 12:54:09 2018]
+rule create_consensus_sequence:
+    input: seq2geno_temp/reference.target_regions.fa, seq2geno_temp/F1659/bwa/vcf.gz, seq2geno_temp/F1659/bwa/vcf.gz.tbi
+    output: seq2geno_temp/F1659/bwa/cons.fa
+    jobid: 54
+    wildcards: TMP_D=seq2geno_temp, strain=F1659, mapper=bwa
+
+[Mon Sep 10 12:54:29 2018]
+Finished job 54.
+50 of 11473 steps (0.44%) done
+
+[Mon Sep 10 12:54:29 2018]
+rule index_vcf:
+    input: seq2geno_temp/F2097/bwa/vcf.gz
+    output: seq2geno_temp/F2097/bwa/vcf.gz.tbi
+    jobid: 116
+    wildcards: TMP_D=seq2geno_temp, strain=F2097, mapper=bwa
+
+[Mon Sep 10 12:54:29 2018]
+Finished job 116.
+51 of 11473 steps (0.44%) done
+
+[Mon Sep 10 12:54:29 2018]
+rule create_consensus_sequence:
+    input: seq2geno_temp/reference.target_regions.fa, seq2geno_temp/F2097/bwa/vcf.gz, seq2geno_temp/F2097/bwa/vcf.gz.tbi
+    output: seq2geno_temp/F2097/bwa/cons.fa
+    jobid: 51
+    wildcards: TMP_D=seq2geno_temp, strain=F2097, mapper=bwa
+
+[Mon Sep 10 12:54:44 2018]
+Finished job 51.
+52 of 11473 steps (0.45%) done
+
+[Mon Sep 10 12:54:44 2018]
+rule index_vcf:
+    input: seq2geno_temp/F2167/bwa/vcf.gz
+    output: seq2geno_temp/F2167/bwa/vcf.gz.tbi
+    jobid: 120
+    wildcards: TMP_D=seq2geno_temp, strain=F2167, mapper=bwa
+
+[Mon Sep 10 12:54:45 2018]
+Finished job 120.
+53 of 11473 steps (0.46%) done
+
+[Mon Sep 10 12:54:45 2018]
+rule create_consensus_sequence:
+    input: seq2geno_temp/reference.target_regions.fa, seq2geno_temp/F2167/bwa/vcf.gz, seq2geno_temp/F2167/bwa/vcf.gz.tbi
+    output: seq2geno_temp/F2167/bwa/cons.fa
+    jobid: 53
+    wildcards: TMP_D=seq2geno_temp, strain=F2167, mapper=bwa
+
+[Mon Sep 10 12:55:00 2018]
+Finished job 53.
+54 of 11473 steps (0.47%) done
+
+[Mon Sep 10 12:55:00 2018]
+rule index_vcf:
+    input: seq2geno_temp/MHH14911/bwa/vcf.gz
+    output: seq2geno_temp/MHH14911/bwa/vcf.gz.tbi
+    jobid: 118
+    wildcards: TMP_D=seq2geno_temp, strain=MHH14911, mapper=bwa
+
+[Mon Sep 10 12:55:01 2018]
+Finished job 118.
+55 of 11473 steps (0.48%) done
+
+[Mon Sep 10 12:55:01 2018]
+rule create_consensus_sequence:
+    input: seq2geno_temp/reference.target_regions.fa, seq2geno_temp/MHH14911/bwa/vcf.gz, seq2geno_temp/MHH14911/bwa/vcf.gz.tbi
+    output: seq2geno_temp/MHH14911/bwa/cons.fa
+    jobid: 52
+    wildcards: TMP_D=seq2geno_temp, strain=MHH14911, mapper=bwa
+
+[Mon Sep 10 12:55:16 2018]
+Finished job 52.
+56 of 11473 steps (0.49%) done
+
+[Mon Sep 10 12:55:16 2018]
+rule index_vcf:
+    input: seq2geno_temp/MHH15103/bwa/vcf.gz
+    output: seq2geno_temp/MHH15103/bwa/vcf.gz.tbi
+    jobid: 126
+    wildcards: TMP_D=seq2geno_temp, strain=MHH15103, mapper=bwa
+
+[Mon Sep 10 12:55:16 2018]
+Finished job 126.
+57 of 11473 steps (0.50%) done
+
+[Mon Sep 10 12:55:17 2018]
+rule create_consensus_sequence:
+    input: seq2geno_temp/reference.target_regions.fa, seq2geno_temp/MHH15103/bwa/vcf.gz, seq2geno_temp/MHH15103/bwa/vcf.gz.tbi
+    output: seq2geno_temp/MHH15103/bwa/cons.fa
+    jobid: 56
+    wildcards: TMP_D=seq2geno_temp, strain=MHH15103, mapper=bwa
+
+[Mon Sep 10 12:55:31 2018]
+Finished job 56.
+58 of 11473 steps (0.51%) done
+
+[Mon Sep 10 12:55:31 2018]
+rule compute_gpa_table:
+    input: seq2geno_temp/roary/gene_presence_absence.csv
+    output: /net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/results/gpa.tab
+    jobid: 2
+
+[Mon Sep 10 12:55:34 2018]
+Finished job 2.
+59 of 11473 steps (0.51%) done
+
+[Mon Sep 10 12:55:34 2018]
+rule compress_feat_table:
+    input: /net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/results/nonsyn_snps.tab
+    output: /net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/results/nonsyn_snps.tab_GROUPS, /net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/results/nonsyn_snps.tab_NON-RDNT
+    jobid: 7
+    wildcards: prefix=/net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/results/nonsyn_snps.tab
+
+[Mon Sep 10 12:55:43 2018]
+Finished job 7.
+60 of 11473 steps (0.52%) done
+
+[Mon Sep 10 12:55:43 2018]
+rule index_vcf:
+    input: seq2geno_temp/CH2500/bwa/vcf.gz
+    output: seq2geno_temp/CH2500/bwa/vcf.gz.tbi
+    jobid: 114
+    wildcards: TMP_D=seq2geno_temp, strain=CH2500, mapper=bwa
+
+[Mon Sep 10 12:55:43 2018]
+Finished job 114.
+61 of 11473 steps (0.53%) done
+
+[Mon Sep 10 12:55:43 2018]
+rule create_consensus_sequence:
+    input: seq2geno_temp/reference.target_regions.fa, seq2geno_temp/CH2500/bwa/vcf.gz, seq2geno_temp/CH2500/bwa/vcf.gz.tbi
+    output: seq2geno_temp/CH2500/bwa/cons.fa
+    jobid: 50
+    wildcards: TMP_D=seq2geno_temp, strain=CH2500, mapper=bwa
+
+[Mon Sep 10 12:55:55 2018]
+Finished job 50.
+62 of 11473 steps (0.54%) done
+
+[Mon Sep 10 12:55:55 2018]
+rule create_coding_regions_aln:
+    input: seq2geno_temp/CH2500/bwa/cons.fa, seq2geno_temp/CH2502/bwa/cons.fa, seq2geno_temp/CH2522/bwa/cons.fa, seq2geno_temp/F1659/bwa/cons.fa, seq2geno_temp/ESP088/bwa/cons.fa, seq2geno_temp/MHH15083/bwa/cons.fa, seq2geno_temp/F2167/bwa/cons.fa, seq2geno_temp/F2097/bwa/cons.fa, seq2geno_temp/MHH14911/bwa/cons.fa, seq2geno_temp/MHH15103/bwa/cons.fa
+    output: seq2geno_temp/OneBig.aln
+    jobid: 27
+    wildcards: TMP_D=seq2geno_temp
+
+    [Mon Sep 10 12:55:56 2018]
+    Error in rule create_coding_regions_aln:
+        jobid: 27
+        output: seq2geno_temp/OneBig.aln
+
+RuleException:
+WorkflowError in line 64 of /net/sgi/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/INFER_TREE.smk:
+URLError: <urlopen error [Errno 2] No such file or directory: '/net/sgi/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/makeAlignment.py'>
+  File "/net/sgi/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/INFER_TREE.smk", line 64, in __rule_create_coding_regions_aln
+  File "/home/thkuo/miniconda3/envs/seq2geno/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /net/sgi/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/.snakemake/log/2018-09-10T095501.456248.snakemake.log

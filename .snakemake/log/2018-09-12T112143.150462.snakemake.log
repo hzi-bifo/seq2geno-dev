@@ -1,0 +1,2434 @@
+Building DAG of jobs...
+Job counts:
+	count	jobs
+	1	all
+	1	all_snps_list
+	5681	aln_to_vcf_per_fam
+	3	compress_feat_table
+	1	covert_snps_table
+	1	create_and_make_expr_table
+	1	create_indel_table
+	1	expand_by_family
+	10	gene_counts
+	1	nonsyn_snps_table
+	1	syn_snps_table
+	5681	vcf_to_indels_per_fam
+	1	write_dict_file
+	11384
+
+[Wed Sep 12 11:27:24 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/btuF_2.aln
+    output: seq2geno_temp/extracted_proteins_nt/btuF_2.vcf
+    jobid: 9520
+    wildcards: fam=btuF_2
+
+
+[Wed Sep 12 11:27:24 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/cckA_2.aln
+    output: seq2geno_temp/extracted_proteins_nt/cckA_2.vcf
+    jobid: 9035
+    wildcards: fam=cckA_2
+
+
+[Wed Sep 12 11:27:24 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/yigB.aln
+    output: seq2geno_temp/extracted_proteins_nt/yigB.vcf
+    jobid: 9467
+    wildcards: fam=yigB
+
+
+[Wed Sep 12 11:27:24 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/ccmC.aln
+    output: seq2geno_temp/extracted_proteins_nt/ccmC.vcf
+    jobid: 8468
+    wildcards: fam=ccmC
+
+
+[Wed Sep 12 11:27:24 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/ydjF.aln
+    output: seq2geno_temp/extracted_proteins_nt/ydjF.vcf
+    jobid: 11080
+    wildcards: fam=ydjF
+
+
+[Wed Sep 12 11:27:24 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/nasE.aln
+    output: seq2geno_temp/extracted_proteins_nt/nasE.vcf
+    jobid: 6875
+    wildcards: fam=nasE
+
+
+[Wed Sep 12 11:27:24 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/mkl.aln
+    output: seq2geno_temp/extracted_proteins_nt/mkl.vcf
+    jobid: 8625
+    wildcards: fam=mkl
+
+
+[Wed Sep 12 11:27:24 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/rcsC.aln
+    output: seq2geno_temp/extracted_proteins_nt/rcsC.vcf
+    jobid: 9249
+    wildcards: fam=rcsC
+
+
+[Wed Sep 12 11:27:24 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_8497.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_8497.vcf
+    jobid: 11086
+    wildcards: fam=group_8497
+
+
+[Wed Sep 12 11:27:24 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/nuoB.aln
+    output: seq2geno_temp/extracted_proteins_nt/nuoB.vcf
+    jobid: 10016
+    wildcards: fam=nuoB
+
+
+[Wed Sep 12 11:27:24 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/bepF_1.aln
+    output: seq2geno_temp/extracted_proteins_nt/bepF_1.vcf
+    jobid: 8506
+    wildcards: fam=bepF_1
+
+
+[Wed Sep 12 11:27:24 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_550.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_550.vcf
+    jobid: 8822
+    wildcards: fam=group_550
+
+
+[Wed Sep 12 11:27:24 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_9114.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_9114.vcf
+    jobid: 9699
+    wildcards: fam=group_9114
+
+
+[Wed Sep 12 11:27:24 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/zraR_3.aln
+    output: seq2geno_temp/extracted_proteins_nt/zraR_3.vcf
+    jobid: 11461
+    wildcards: fam=zraR_3
+
+
+[Wed Sep 12 11:27:24 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/ftsA_1.aln
+    output: seq2geno_temp/extracted_proteins_nt/ftsA_1.vcf
+    jobid: 11243
+    wildcards: fam=ftsA_1
+
+
+[Wed Sep 12 11:27:24 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/cph2_3.aln
+    output: seq2geno_temp/extracted_proteins_nt/cph2_3.vcf
+    jobid: 9141
+    wildcards: fam=cph2_3
+
+
+[Wed Sep 12 11:27:24 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/pal_1.aln
+    output: seq2geno_temp/extracted_proteins_nt/pal_1.vcf
+    jobid: 6037
+    wildcards: fam=pal_1
+
+
+[Wed Sep 12 11:27:24 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_5511.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_5511.vcf
+    jobid: 9643
+    wildcards: fam=group_5511
+
+
+[Wed Sep 12 11:27:24 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_9219.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_9219.vcf
+    jobid: 10575
+    wildcards: fam=group_9219
+
+
+[Wed Sep 12 11:27:24 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/metR_1.aln
+    output: seq2geno_temp/extracted_proteins_nt/metR_1.vcf
+    jobid: 7465
+    wildcards: fam=metR_1
+
+
+[Wed Sep 12 11:27:24 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/ldhA.aln
+    output: seq2geno_temp/extracted_proteins_nt/ldhA.vcf
+    jobid: 11319
+    wildcards: fam=ldhA
+
+
+[Wed Sep 12 11:27:24 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/mdaB.aln
+    output: seq2geno_temp/extracted_proteins_nt/mdaB.vcf
+    jobid: 8753
+    wildcards: fam=mdaB
+
+
+[Wed Sep 12 11:27:24 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/betA_1.aln
+    output: seq2geno_temp/extracted_proteins_nt/betA_1.vcf
+    jobid: 10168
+    wildcards: fam=betA_1
+
+
+[Wed Sep 12 11:27:24 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_8797.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_8797.vcf
+    jobid: 5929
+    wildcards: fam=group_8797
+
+
+[Wed Sep 12 11:27:24 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/nusG.aln
+    output: seq2geno_temp/extracted_proteins_nt/nusG.vcf
+    jobid: 10645
+    wildcards: fam=nusG
+
+
+[Wed Sep 12 11:27:24 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/mntH_2.aln
+    output: seq2geno_temp/extracted_proteins_nt/mntH_2.vcf
+    jobid: 7438
+    wildcards: fam=mntH_2
+
+
+[Wed Sep 12 11:27:24 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/ydfJ.aln
+    output: seq2geno_temp/extracted_proteins_nt/ydfJ.vcf
+    jobid: 8662
+    wildcards: fam=ydfJ
+
+
+[Wed Sep 12 11:27:24 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/pgdA.aln
+    output: seq2geno_temp/extracted_proteins_nt/pgdA.vcf
+    jobid: 9519
+    wildcards: fam=pgdA
+
+
+[Wed Sep 12 11:27:24 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_8817.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_8817.vcf
+    jobid: 9215
+    wildcards: fam=group_8817
+
+
+[Wed Sep 12 11:27:24 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_6632.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_6632.vcf
+    jobid: 7145
+    wildcards: fam=group_6632
+
+
+[Wed Sep 12 11:27:24 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/trxA_3.aln
+    output: seq2geno_temp/extracted_proteins_nt/trxA_3.vcf
+    jobid: 6079
+    wildcards: fam=trxA_3
+
+
+[Wed Sep 12 11:27:24 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_86.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_86.vcf
+    jobid: 10888
+    wildcards: fam=group_86
+
+
+[Wed Sep 12 11:27:24 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_5916.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_5916.vcf
+    jobid: 8470
+    wildcards: fam=group_5916
+
+
+[Wed Sep 12 11:27:24 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/zapA.aln
+    output: seq2geno_temp/extracted_proteins_nt/zapA.vcf
+    jobid: 6627
+    wildcards: fam=zapA
+
+
+[Wed Sep 12 11:27:24 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_7677.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_7677.vcf
+    jobid: 11585
+    wildcards: fam=group_7677
+
+
+[Wed Sep 12 11:27:24 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_1096.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_1096.vcf
+    jobid: 11181
+    wildcards: fam=group_1096
+
+
+[Wed Sep 12 11:27:24 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/ribE.aln
+    output: seq2geno_temp/extracted_proteins_nt/ribE.vcf
+    jobid: 7612
+    wildcards: fam=ribE
+
+
+[Wed Sep 12 11:27:24 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/mreB.aln
+    output: seq2geno_temp/extracted_proteins_nt/mreB.vcf
+    jobid: 9381
+    wildcards: fam=mreB
+
+
+[Wed Sep 12 11:27:24 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_8469.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_8469.vcf
+    jobid: 11016
+    wildcards: fam=group_8469
+
+
+[Wed Sep 12 11:27:24 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/cca.aln
+    output: seq2geno_temp/extracted_proteins_nt/cca.vcf
+    jobid: 10335
+    wildcards: fam=cca
+
+
+[Wed Sep 12 11:27:24 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_7306.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_7306.vcf
+    jobid: 7364
+    wildcards: fam=group_7306
+
+
+[Wed Sep 12 11:27:24 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/ftsH2.aln
+    output: seq2geno_temp/extracted_proteins_nt/ftsH2.vcf
+    jobid: 8946
+    wildcards: fam=ftsH2
+
+
+[Wed Sep 12 11:27:24 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/ccoP2.aln
+    output: seq2geno_temp/extracted_proteins_nt/ccoP2.vcf
+    jobid: 9492
+    wildcards: fam=ccoP2
+
+
+[Wed Sep 12 11:27:24 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_1330.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_1330.vcf
+    jobid: 8272
+    wildcards: fam=group_1330
+
+
+[Wed Sep 12 11:27:24 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/ssuA_2.aln
+    output: seq2geno_temp/extracted_proteins_nt/ssuA_2.vcf
+    jobid: 7831
+    wildcards: fam=ssuA_2
+
+
+[Wed Sep 12 11:27:24 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_7020.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_7020.vcf
+    jobid: 7786
+    wildcards: fam=group_7020
+
+
+[Wed Sep 12 11:27:24 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_7187.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_7187.vcf
+    jobid: 10053
+    wildcards: fam=group_7187
+
+
+[Wed Sep 12 11:27:24 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/ubiG_3.aln
+    output: seq2geno_temp/extracted_proteins_nt/ubiG_3.vcf
+    jobid: 6639
+    wildcards: fam=ubiG_3
+
+
+[Wed Sep 12 11:27:24 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/sqr.aln
+    output: seq2geno_temp/extracted_proteins_nt/sqr.vcf
+    jobid: 9024
+    wildcards: fam=sqr
+
+
+[Wed Sep 12 11:27:24 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_5018.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_5018.vcf
+    jobid: 5961
+    wildcards: fam=group_5018
+
+
+[Wed Sep 12 11:27:24 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/iscA.aln
+    output: seq2geno_temp/extracted_proteins_nt/iscA.vcf
+    jobid: 7029
+    wildcards: fam=iscA
+
+
+[Wed Sep 12 11:27:24 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_2722.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_2722.vcf
+    jobid: 11195
+    wildcards: fam=group_2722
+
+
+[Wed Sep 12 11:27:24 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/sspA_2.aln
+    output: seq2geno_temp/extracted_proteins_nt/sspA_2.vcf
+    jobid: 10854
+    wildcards: fam=sspA_2
+
+
+[Wed Sep 12 11:27:24 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/estB_2.aln
+    output: seq2geno_temp/extracted_proteins_nt/estB_2.vcf
+    jobid: 11146
+    wildcards: fam=estB_2
+
+
+[Wed Sep 12 11:27:24 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_6333.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_6333.vcf
+    jobid: 7093
+    wildcards: fam=group_6333
+
+
+[Wed Sep 12 11:27:24 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/nicP_7.aln
+    output: seq2geno_temp/extracted_proteins_nt/nicP_7.vcf
+    jobid: 9279
+    wildcards: fam=nicP_7
+
+
+[Wed Sep 12 11:27:24 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/rlmG.aln
+    output: seq2geno_temp/extracted_proteins_nt/rlmG.vcf
+    jobid: 10452
+    wildcards: fam=rlmG
+
+
+[Wed Sep 12 11:27:24 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_5096.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_5096.vcf
+    jobid: 7746
+    wildcards: fam=group_5096
+
+
+[Wed Sep 12 11:27:24 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_466.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_466.vcf
+    jobid: 9180
+    wildcards: fam=group_466
+
+
+[Wed Sep 12 11:27:24 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_6633.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_6633.vcf
+    jobid: 11337
+    wildcards: fam=group_6633
+
+
+[Wed Sep 12 11:27:24 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_6630.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_6630.vcf
+    jobid: 10206
+    wildcards: fam=group_6630
+
+
+[Wed Sep 12 11:27:24 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_293.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_293.vcf
+    jobid: 10334
+    wildcards: fam=group_293
+
+
+[Wed Sep 12 11:27:24 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/zapE_1.aln
+    output: seq2geno_temp/extracted_proteins_nt/zapE_1.vcf
+    jobid: 6505
+    wildcards: fam=zapE_1
+
+
+[Wed Sep 12 11:27:24 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/spuD_1.aln
+    output: seq2geno_temp/extracted_proteins_nt/spuD_1.vcf
+    jobid: 6869
+    wildcards: fam=spuD_1
+
+
+[Wed Sep 12 11:27:24 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/pqqB.aln
+    output: seq2geno_temp/extracted_proteins_nt/pqqB.vcf
+    jobid: 11586
+    wildcards: fam=pqqB
+
+
+[Wed Sep 12 11:27:24 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/dapA_4.aln
+    output: seq2geno_temp/extracted_proteins_nt/dapA_4.vcf
+    jobid: 10490
+    wildcards: fam=dapA_4
+
+
+[Wed Sep 12 11:27:24 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_6721.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_6721.vcf
+    jobid: 9341
+    wildcards: fam=group_6721
+
+
+[Wed Sep 12 11:27:24 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/ychF.aln
+    output: seq2geno_temp/extracted_proteins_nt/ychF.vcf
+    jobid: 8336
+    wildcards: fam=ychF
+
+
+[Wed Sep 12 11:27:24 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/ycgR_2.aln
+    output: seq2geno_temp/extracted_proteins_nt/ycgR_2.vcf
+    jobid: 10756
+    wildcards: fam=ycgR_2
+
+
+[Wed Sep 12 11:27:24 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_952.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_952.vcf
+    jobid: 6382
+    wildcards: fam=group_952
+
+
+[Wed Sep 12 11:27:24 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/trmO.aln
+    output: seq2geno_temp/extracted_proteins_nt/trmO.vcf
+    jobid: 8212
+    wildcards: fam=trmO
+
+
+[Wed Sep 12 11:27:24 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/yhjE_2.aln
+    output: seq2geno_temp/extracted_proteins_nt/yhjE_2.vcf
+    jobid: 6433
+    wildcards: fam=yhjE_2
+
+
+[Wed Sep 12 11:27:24 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/rpfC_2.aln
+    output: seq2geno_temp/extracted_proteins_nt/rpfC_2.vcf
+    jobid: 7874
+    wildcards: fam=rpfC_2
+
+
+[Wed Sep 12 11:27:24 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/btuB.aln
+    output: seq2geno_temp/extracted_proteins_nt/btuB.vcf
+    jobid: 7436
+    wildcards: fam=btuB
+
+
+[Wed Sep 12 11:27:24 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/crp_1.aln
+    output: seq2geno_temp/extracted_proteins_nt/crp_1.vcf
+    jobid: 11189
+    wildcards: fam=crp_1
+
+
+[Wed Sep 12 11:27:24 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_9151.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_9151.vcf
+    jobid: 10355
+    wildcards: fam=group_9151
+
+
+[Wed Sep 12 11:27:24 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_6418.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_6418.vcf
+    jobid: 8784
+    wildcards: fam=group_6418
+
+
+[Wed Sep 12 11:27:24 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/crp_2.aln
+    output: seq2geno_temp/extracted_proteins_nt/crp_2.vcf
+    jobid: 8592
+    wildcards: fam=crp_2
+
+
+[Wed Sep 12 11:27:24 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/cirA_2.aln
+    output: seq2geno_temp/extracted_proteins_nt/cirA_2.vcf
+    jobid: 8191
+    wildcards: fam=cirA_2
+
+
+[Wed Sep 12 11:27:25 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/gltR_1.aln
+    output: seq2geno_temp/extracted_proteins_nt/gltR_1.vcf
+    jobid: 9029
+    wildcards: fam=gltR_1
+
+
+[Wed Sep 12 11:27:25 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_5984.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_5984.vcf
+    jobid: 8501
+    wildcards: fam=group_5984
+
+
+[Wed Sep 12 11:27:25 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_423.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_423.vcf
+    jobid: 9056
+    wildcards: fam=group_423
+
+
+[Wed Sep 12 11:27:25 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/yjaB_2.aln
+    output: seq2geno_temp/extracted_proteins_nt/yjaB_2.vcf
+    jobid: 9851
+    wildcards: fam=yjaB_2
+
+
+[Wed Sep 12 11:27:25 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/yqgF.aln
+    output: seq2geno_temp/extracted_proteins_nt/yqgF.vcf
+    jobid: 7619
+    wildcards: fam=yqgF
+
+
+[Wed Sep 12 11:27:25 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/hcaR_1.aln
+    output: seq2geno_temp/extracted_proteins_nt/hcaR_1.vcf
+    jobid: 9566
+    wildcards: fam=hcaR_1
+
+
+[Wed Sep 12 11:27:25 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/accA1_1.aln
+    output: seq2geno_temp/extracted_proteins_nt/accA1_1.vcf
+    jobid: 11052
+    wildcards: fam=accA1_1
+
+
+[Wed Sep 12 11:27:25 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/glmS_1.aln
+    output: seq2geno_temp/extracted_proteins_nt/glmS_1.vcf
+    jobid: 7220
+    wildcards: fam=glmS_1
+
+
+[Wed Sep 12 11:27:25 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/macB_3.aln
+    output: seq2geno_temp/extracted_proteins_nt/macB_3.vcf
+    jobid: 6582
+    wildcards: fam=macB_3
+
+
+[Wed Sep 12 11:27:25 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/emrK_1.aln
+    output: seq2geno_temp/extracted_proteins_nt/emrK_1.vcf
+    jobid: 11289
+    wildcards: fam=emrK_1
+
+
+[Wed Sep 12 11:27:25 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_6920.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_6920.vcf
+    jobid: 9195
+    wildcards: fam=group_6920
+
+
+[Wed Sep 12 11:27:25 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/eamA_2.aln
+    output: seq2geno_temp/extracted_proteins_nt/eamA_2.vcf
+    jobid: 8424
+    wildcards: fam=eamA_2
+
+
+[Wed Sep 12 11:27:25 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_6753.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_6753.vcf
+    jobid: 9597
+    wildcards: fam=group_6753
+
+
+[Wed Sep 12 11:27:25 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/sufS_2.aln
+    output: seq2geno_temp/extracted_proteins_nt/sufS_2.vcf
+    jobid: 7473
+    wildcards: fam=sufS_2
+
+
+[Wed Sep 12 11:27:25 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/eryG.aln
+    output: seq2geno_temp/extracted_proteins_nt/eryG.vcf
+    jobid: 8186
+    wildcards: fam=eryG
+
+
+[Wed Sep 12 11:27:25 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/typA.aln
+    output: seq2geno_temp/extracted_proteins_nt/typA.vcf
+    jobid: 8735
+    wildcards: fam=typA
+
+
+[Wed Sep 12 11:27:25 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/gntT.aln
+    output: seq2geno_temp/extracted_proteins_nt/gntT.vcf
+    jobid: 7028
+    wildcards: fam=gntT
+
+
+[Wed Sep 12 11:27:25 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_8179.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_8179.vcf
+    jobid: 8047
+    wildcards: fam=group_8179
+
+
+[Wed Sep 12 11:27:25 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/rimO_1.aln
+    output: seq2geno_temp/extracted_proteins_nt/rimO_1.vcf
+    jobid: 10499
+    wildcards: fam=rimO_1
+
+
+[Wed Sep 12 11:27:25 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_7006.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_7006.vcf
+    jobid: 10209
+    wildcards: fam=group_7006
+
+
+[Wed Sep 12 11:27:25 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_7460.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_7460.vcf
+    jobid: 9322
+    wildcards: fam=group_7460
+
+
+[Wed Sep 12 11:27:25 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/aaeA_4.aln
+    output: seq2geno_temp/extracted_proteins_nt/aaeA_4.vcf
+    jobid: 11059
+    wildcards: fam=aaeA_4
+
+
+[Wed Sep 12 11:27:25 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/mtr_2.aln
+    output: seq2geno_temp/extracted_proteins_nt/mtr_2.vcf
+    jobid: 6523
+    wildcards: fam=mtr_2
+
+
+[Wed Sep 12 11:27:25 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/vgb_1.aln
+    output: seq2geno_temp/extracted_proteins_nt/vgb_1.vcf
+    jobid: 10374
+    wildcards: fam=vgb_1
+
+
+[Wed Sep 12 11:27:25 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/nqrA.aln
+    output: seq2geno_temp/extracted_proteins_nt/nqrA.vcf
+    jobid: 7639
+    wildcards: fam=nqrA
+
+
+[Wed Sep 12 11:27:25 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_6535.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_6535.vcf
+    jobid: 9847
+    wildcards: fam=group_6535
+
+
+[Wed Sep 12 11:27:25 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/yhjX_1.aln
+    output: seq2geno_temp/extracted_proteins_nt/yhjX_1.vcf
+    jobid: 7875
+    wildcards: fam=yhjX_1
+
+
+[Wed Sep 12 11:27:25 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_8882.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_8882.vcf
+    jobid: 11083
+    wildcards: fam=group_8882
+
+
+[Wed Sep 12 11:27:25 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_5001.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_5001.vcf
+    jobid: 9353
+    wildcards: fam=group_5001
+
+
+[Wed Sep 12 11:27:25 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_2564.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_2564.vcf
+    jobid: 10272
+    wildcards: fam=group_2564
+
+
+[Wed Sep 12 11:27:25 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/rpsT.aln
+    output: seq2geno_temp/extracted_proteins_nt/rpsT.vcf
+    jobid: 10872
+    wildcards: fam=rpsT
+
+
+[Wed Sep 12 11:27:25 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/dmlR_15.aln
+    output: seq2geno_temp/extracted_proteins_nt/dmlR_15.vcf
+    jobid: 8094
+    wildcards: fam=dmlR_15
+
+
+[Wed Sep 12 11:27:25 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/acsA_3.aln
+    output: seq2geno_temp/extracted_proteins_nt/acsA_3.vcf
+    jobid: 9507
+    wildcards: fam=acsA_3
+
+
+[Wed Sep 12 11:27:25 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/aroF_1.aln
+    output: seq2geno_temp/extracted_proteins_nt/aroF_1.vcf
+    jobid: 9896
+    wildcards: fam=aroF_1
+
+
+[Wed Sep 12 11:27:25 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_5159.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_5159.vcf
+    jobid: 6100
+    wildcards: fam=group_5159
+
+
+[Wed Sep 12 11:27:25 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_8168.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_8168.vcf
+    jobid: 11525
+    wildcards: fam=group_8168
+
+
+[Wed Sep 12 11:27:25 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/arsC_2.aln
+    output: seq2geno_temp/extracted_proteins_nt/arsC_2.vcf
+    jobid: 10169
+    wildcards: fam=arsC_2
+
+
+[Wed Sep 12 11:27:25 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_5335.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_5335.vcf
+    jobid: 7447
+    wildcards: fam=group_5335
+
+
+[Wed Sep 12 11:27:25 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/pmfR_2.aln
+    output: seq2geno_temp/extracted_proteins_nt/pmfR_2.vcf
+    jobid: 9514
+    wildcards: fam=pmfR_2
+
+
+[Wed Sep 12 11:27:25 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/ybaK_2.aln
+    output: seq2geno_temp/extracted_proteins_nt/ybaK_2.vcf
+    jobid: 9107
+    wildcards: fam=ybaK_2
+
+
+[Wed Sep 12 11:27:25 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_7193.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_7193.vcf
+    jobid: 9074
+    wildcards: fam=group_7193
+
+
+[Wed Sep 12 11:27:25 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_5956.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_5956.vcf
+    jobid: 6716
+    wildcards: fam=group_5956
+
+
+[Wed Sep 12 11:27:25 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_9577.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_9577.vcf
+    jobid: 7778
+    wildcards: fam=group_9577
+
+
+[Wed Sep 12 11:27:25 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/arnE_2.aln
+    output: seq2geno_temp/extracted_proteins_nt/arnE_2.vcf
+    jobid: 8223
+    wildcards: fam=arnE_2
+
+
+[Wed Sep 12 11:27:25 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/tsx.aln
+    output: seq2geno_temp/extracted_proteins_nt/tsx.vcf
+    jobid: 11057
+    wildcards: fam=tsx
+
+
+[Wed Sep 12 11:27:25 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/glpQ_2.aln
+    output: seq2geno_temp/extracted_proteins_nt/glpQ_2.vcf
+    jobid: 7110
+    wildcards: fam=glpQ_2
+
+
+[Wed Sep 12 11:27:25 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/hemL_2.aln
+    output: seq2geno_temp/extracted_proteins_nt/hemL_2.vcf
+    jobid: 8031
+    wildcards: fam=hemL_2
+
+
+[Wed Sep 12 11:27:25 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/bvgA_2.aln
+    output: seq2geno_temp/extracted_proteins_nt/bvgA_2.vcf
+    jobid: 7277
+    wildcards: fam=bvgA_2
+
+
+[Wed Sep 12 11:27:25 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/msuD_2.aln
+    output: seq2geno_temp/extracted_proteins_nt/msuD_2.vcf
+    jobid: 6500
+    wildcards: fam=msuD_2
+
+
+[Wed Sep 12 11:27:25 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_6929.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_6929.vcf
+    jobid: 9583
+    wildcards: fam=group_6929
+
+
+[Wed Sep 12 11:27:25 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/yeiG.aln
+    output: seq2geno_temp/extracted_proteins_nt/yeiG.vcf
+    jobid: 9961
+    wildcards: fam=yeiG
+
+
+[Wed Sep 12 11:27:25 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/nagE.aln
+    output: seq2geno_temp/extracted_proteins_nt/nagE.vcf
+    jobid: 7938
+    wildcards: fam=nagE
+
+
+[Wed Sep 12 11:27:25 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/hemH.aln
+    output: seq2geno_temp/extracted_proteins_nt/hemH.vcf
+    jobid: 11228
+    wildcards: fam=hemH
+
+
+[Wed Sep 12 11:27:25 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_8338.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_8338.vcf
+    jobid: 8673
+    wildcards: fam=group_8338
+
+
+[Wed Sep 12 11:27:25 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/flgG.aln
+    output: seq2geno_temp/extracted_proteins_nt/flgG.vcf
+    jobid: 8305
+    wildcards: fam=flgG
+
+
+[Wed Sep 12 11:27:25 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_6910.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_6910.vcf
+    jobid: 11247
+    wildcards: fam=group_6910
+
+
+[Wed Sep 12 11:27:25 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_306.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_306.vcf
+    jobid: 9690
+    wildcards: fam=group_306
+
+
+[Wed Sep 12 11:27:25 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/rpsG.aln
+    output: seq2geno_temp/extracted_proteins_nt/rpsG.vcf
+    jobid: 10400
+    wildcards: fam=rpsG
+
+
+[Wed Sep 12 11:27:25 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/trkA.aln
+    output: seq2geno_temp/extracted_proteins_nt/trkA.vcf
+    jobid: 6477
+    wildcards: fam=trkA
+
+
+[Wed Sep 12 11:27:25 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/xcpP_1.aln
+    output: seq2geno_temp/extracted_proteins_nt/xcpP_1.vcf
+    jobid: 6862
+    wildcards: fam=xcpP_1
+
+
+[Wed Sep 12 11:27:25 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/pkn1_2.aln
+    output: seq2geno_temp/extracted_proteins_nt/pkn1_2.vcf
+    jobid: 10944
+    wildcards: fam=pkn1_2
+
+
+[Wed Sep 12 11:27:25 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/lepA.aln
+    output: seq2geno_temp/extracted_proteins_nt/lepA.vcf
+    jobid: 11487
+    wildcards: fam=lepA
+
+
+[Wed Sep 12 11:27:25 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_8435.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_8435.vcf
+    jobid: 8522
+    wildcards: fam=group_8435
+
+
+[Wed Sep 12 11:27:25 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/feoB.aln
+    output: seq2geno_temp/extracted_proteins_nt/feoB.vcf
+    jobid: 6318
+    wildcards: fam=feoB
+
+
+[Wed Sep 12 11:27:25 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/liaS.aln
+    output: seq2geno_temp/extracted_proteins_nt/liaS.vcf
+    jobid: 7128
+    wildcards: fam=liaS
+
+
+[Wed Sep 12 11:27:25 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/ahpF_2.aln
+    output: seq2geno_temp/extracted_proteins_nt/ahpF_2.vcf
+    jobid: 6291
+    wildcards: fam=ahpF_2
+
+
+[Wed Sep 12 11:27:25 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_6129.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_6129.vcf
+    jobid: 8965
+    wildcards: fam=group_6129
+
+
+[Wed Sep 12 11:27:25 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/accB_1.aln
+    output: seq2geno_temp/extracted_proteins_nt/accB_1.vcf
+    jobid: 9162
+    wildcards: fam=accB_1
+
+
+[Wed Sep 12 11:27:25 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_6951.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_6951.vcf
+    jobid: 6779
+    wildcards: fam=group_6951
+
+
+[Wed Sep 12 11:27:25 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/acoC.aln
+    output: seq2geno_temp/extracted_proteins_nt/acoC.vcf
+    jobid: 5974
+    wildcards: fam=acoC
+
+
+[Wed Sep 12 11:27:25 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/cadI.aln
+    output: seq2geno_temp/extracted_proteins_nt/cadI.vcf
+    jobid: 10533
+    wildcards: fam=cadI
+
+
+[Wed Sep 12 11:27:25 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_5260.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_5260.vcf
+    jobid: 7814
+    wildcards: fam=group_5260
+
+
+[Wed Sep 12 11:27:25 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_8802.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_8802.vcf
+    jobid: 7882
+    wildcards: fam=group_8802
+
+
+[Wed Sep 12 11:27:25 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/tsaQ1_2.aln
+    output: seq2geno_temp/extracted_proteins_nt/tsaQ1_2.vcf
+    jobid: 9414
+    wildcards: fam=tsaQ1_2
+
+
+[Wed Sep 12 11:27:25 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/cyaB.aln
+    output: seq2geno_temp/extracted_proteins_nt/cyaB.vcf
+    jobid: 7459
+    wildcards: fam=cyaB
+
+
+[Wed Sep 12 11:27:25 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/lgt.aln
+    output: seq2geno_temp/extracted_proteins_nt/lgt.vcf
+    jobid: 6464
+    wildcards: fam=lgt
+
+
+[Wed Sep 12 11:27:25 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/soxC_6.aln
+    output: seq2geno_temp/extracted_proteins_nt/soxC_6.vcf
+    jobid: 8081
+    wildcards: fam=soxC_6
+
+
+[Wed Sep 12 11:27:25 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/mltD.aln
+    output: seq2geno_temp/extracted_proteins_nt/mltD.vcf
+    jobid: 8533
+    wildcards: fam=mltD
+
+
+[Wed Sep 12 11:27:25 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/hisG.aln
+    output: seq2geno_temp/extracted_proteins_nt/hisG.vcf
+    jobid: 5940
+    wildcards: fam=hisG
+
+
+[Wed Sep 12 11:27:25 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/araQ.aln
+    output: seq2geno_temp/extracted_proteins_nt/araQ.vcf
+    jobid: 10539
+    wildcards: fam=araQ
+
+
+[Wed Sep 12 11:27:25 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_6214.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_6214.vcf
+    jobid: 9508
+    wildcards: fam=group_6214
+
+
+[Wed Sep 12 11:27:25 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/arsC_1.aln
+    output: seq2geno_temp/extracted_proteins_nt/arsC_1.vcf
+    jobid: 6712
+    wildcards: fam=arsC_1
+
+
+[Wed Sep 12 11:27:25 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_2381.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_2381.vcf
+    jobid: 8701
+    wildcards: fam=group_2381
+
+
+[Wed Sep 12 11:27:25 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/ftsW.aln
+    output: seq2geno_temp/extracted_proteins_nt/ftsW.vcf
+    jobid: 6932
+    wildcards: fam=ftsW
+
+
+[Wed Sep 12 11:27:25 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/mcbR.aln
+    output: seq2geno_temp/extracted_proteins_nt/mcbR.vcf
+    jobid: 6704
+    wildcards: fam=mcbR
+
+
+[Wed Sep 12 11:27:25 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_9302.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_9302.vcf
+    jobid: 11440
+    wildcards: fam=group_9302
+
+
+[Wed Sep 12 11:27:25 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/yjiE_2.aln
+    output: seq2geno_temp/extracted_proteins_nt/yjiE_2.vcf
+    jobid: 6855
+    wildcards: fam=yjiE_2
+
+
+[Wed Sep 12 11:27:25 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/exsB.aln
+    output: seq2geno_temp/extracted_proteins_nt/exsB.vcf
+    jobid: 7970
+    wildcards: fam=exsB
+
+
+[Wed Sep 12 11:27:25 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/adiA.aln
+    output: seq2geno_temp/extracted_proteins_nt/adiA.vcf
+    jobid: 11540
+    wildcards: fam=adiA
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/leuA_1.aln
+    output: seq2geno_temp/extracted_proteins_nt/leuA_1.vcf
+    jobid: 10413
+    wildcards: fam=leuA_1
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_8841.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_8841.vcf
+    jobid: 10275
+    wildcards: fam=group_8841
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/panD.aln
+    output: seq2geno_temp/extracted_proteins_nt/panD.vcf
+    jobid: 7878
+    wildcards: fam=panD
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/nnr.aln
+    output: seq2geno_temp/extracted_proteins_nt/nnr.vcf
+    jobid: 9522
+    wildcards: fam=nnr
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_9154.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_9154.vcf
+    jobid: 8615
+    wildcards: fam=group_9154
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/mrpF.aln
+    output: seq2geno_temp/extracted_proteins_nt/mrpF.vcf
+    jobid: 10727
+    wildcards: fam=mrpF
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_5514.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_5514.vcf
+    jobid: 8175
+    wildcards: fam=group_5514
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_9166.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_9166.vcf
+    jobid: 9369
+    wildcards: fam=group_9166
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/algB_2.aln
+    output: seq2geno_temp/extracted_proteins_nt/algB_2.vcf
+    jobid: 6010
+    wildcards: fam=algB_2
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/etfA_1.aln
+    output: seq2geno_temp/extracted_proteins_nt/etfA_1.vcf
+    jobid: 9545
+    wildcards: fam=etfA_1
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_8746.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_8746.vcf
+    jobid: 8415
+    wildcards: fam=group_8746
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/paaH_1.aln
+    output: seq2geno_temp/extracted_proteins_nt/paaH_1.vcf
+    jobid: 6239
+    wildcards: fam=paaH_1
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/bauD.aln
+    output: seq2geno_temp/extracted_proteins_nt/bauD.vcf
+    jobid: 9731
+    wildcards: fam=bauD
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/rssB.aln
+    output: seq2geno_temp/extracted_proteins_nt/rssB.vcf
+    jobid: 11493
+    wildcards: fam=rssB
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/acrR.aln
+    output: seq2geno_temp/extracted_proteins_nt/acrR.vcf
+    jobid: 10852
+    wildcards: fam=acrR
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/prfB_1.aln
+    output: seq2geno_temp/extracted_proteins_nt/prfB_1.vcf
+    jobid: 6578
+    wildcards: fam=prfB_1
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_7913.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_7913.vcf
+    jobid: 10005
+    wildcards: fam=group_7913
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_8643.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_8643.vcf
+    jobid: 10486
+    wildcards: fam=group_8643
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/uacT_1.aln
+    output: seq2geno_temp/extracted_proteins_nt/uacT_1.vcf
+    jobid: 10884
+    wildcards: fam=uacT_1
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_1060.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_1060.vcf
+    jobid: 7795
+    wildcards: fam=group_1060
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/xthA_1.aln
+    output: seq2geno_temp/extracted_proteins_nt/xthA_1.vcf
+    jobid: 9749
+    wildcards: fam=xthA_1
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/catB.aln
+    output: seq2geno_temp/extracted_proteins_nt/catB.vcf
+    jobid: 11390
+    wildcards: fam=catB
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/alaC.aln
+    output: seq2geno_temp/extracted_proteins_nt/alaC.vcf
+    jobid: 10006
+    wildcards: fam=alaC
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_6604.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_6604.vcf
+    jobid: 10736
+    wildcards: fam=group_6604
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_5324.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_5324.vcf
+    jobid: 9224
+    wildcards: fam=group_5324
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/zraR_6.aln
+    output: seq2geno_temp/extracted_proteins_nt/zraR_6.vcf
+    jobid: 6935
+    wildcards: fam=zraR_6
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/yciC.aln
+    output: seq2geno_temp/extracted_proteins_nt/yciC.vcf
+    jobid: 7826
+    wildcards: fam=yciC
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/ubiA.aln
+    output: seq2geno_temp/extracted_proteins_nt/ubiA.vcf
+    jobid: 8513
+    wildcards: fam=ubiA
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/cbdB.aln
+    output: seq2geno_temp/extracted_proteins_nt/cbdB.vcf
+    jobid: 6423
+    wildcards: fam=cbdB
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/nimR_5.aln
+    output: seq2geno_temp/extracted_proteins_nt/nimR_5.vcf
+    jobid: 6532
+    wildcards: fam=nimR_5
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/ydaM_3.aln
+    output: seq2geno_temp/extracted_proteins_nt/ydaM_3.vcf
+    jobid: 7556
+    wildcards: fam=ydaM_3
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_774.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_774.vcf
+    jobid: 10012
+    wildcards: fam=group_774
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/dctA.aln
+    output: seq2geno_temp/extracted_proteins_nt/dctA.vcf
+    jobid: 10319
+    wildcards: fam=dctA
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/tdcB_2.aln
+    output: seq2geno_temp/extracted_proteins_nt/tdcB_2.vcf
+    jobid: 6791
+    wildcards: fam=tdcB_2
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_5414.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_5414.vcf
+    jobid: 9360
+    wildcards: fam=group_5414
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_2715.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_2715.vcf
+    jobid: 9232
+    wildcards: fam=group_2715
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_492.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_492.vcf
+    jobid: 8944
+    wildcards: fam=group_492
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/phrB.aln
+    output: seq2geno_temp/extracted_proteins_nt/phrB.vcf
+    jobid: 6888
+    wildcards: fam=phrB
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/yopE.aln
+    output: seq2geno_temp/extracted_proteins_nt/yopE.vcf
+    jobid: 11369
+    wildcards: fam=yopE
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_5556.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_5556.vcf
+    jobid: 6953
+    wildcards: fam=group_5556
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/gabR_2.aln
+    output: seq2geno_temp/extracted_proteins_nt/gabR_2.vcf
+    jobid: 8614
+    wildcards: fam=gabR_2
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_9520.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_9520.vcf
+    jobid: 11222
+    wildcards: fam=group_9520
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_5902.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_5902.vcf
+    jobid: 10693
+    wildcards: fam=group_5902
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/yhdW.aln
+    output: seq2geno_temp/extracted_proteins_nt/yhdW.vcf
+    jobid: 7725
+    wildcards: fam=yhdW
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/dhmA.aln
+    output: seq2geno_temp/extracted_proteins_nt/dhmA.vcf
+    jobid: 8675
+    wildcards: fam=dhmA
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/infC.aln
+    output: seq2geno_temp/extracted_proteins_nt/infC.vcf
+    jobid: 8929
+    wildcards: fam=infC
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/lipL.aln
+    output: seq2geno_temp/extracted_proteins_nt/lipL.vcf
+    jobid: 8492
+    wildcards: fam=lipL
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/hflD.aln
+    output: seq2geno_temp/extracted_proteins_nt/hflD.vcf
+    jobid: 10652
+    wildcards: fam=hflD
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/rpiA.aln
+    output: seq2geno_temp/extracted_proteins_nt/rpiA.vcf
+    jobid: 8654
+    wildcards: fam=rpiA
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/nuoJ.aln
+    output: seq2geno_temp/extracted_proteins_nt/nuoJ.vcf
+    jobid: 11393
+    wildcards: fam=nuoJ
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_9391.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_9391.vcf
+    jobid: 10925
+    wildcards: fam=group_9391
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_7843.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_7843.vcf
+    jobid: 7320
+    wildcards: fam=group_7843
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/rkpK_2.aln
+    output: seq2geno_temp/extracted_proteins_nt/rkpK_2.vcf
+    jobid: 10191
+    wildcards: fam=rkpK_2
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_7624.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_7624.vcf
+    jobid: 7957
+    wildcards: fam=group_7624
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/bltD.aln
+    output: seq2geno_temp/extracted_proteins_nt/bltD.vcf
+    jobid: 6641
+    wildcards: fam=bltD
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/uraA.aln
+    output: seq2geno_temp/extracted_proteins_nt/uraA.vcf
+    jobid: 10453
+    wildcards: fam=uraA
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/estA.aln
+    output: seq2geno_temp/extracted_proteins_nt/estA.vcf
+    jobid: 8792
+    wildcards: fam=estA
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/pyrC_1.aln
+    output: seq2geno_temp/extracted_proteins_nt/pyrC_1.vcf
+    jobid: 6180
+    wildcards: fam=pyrC_1
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_9202.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_9202.vcf
+    jobid: 8455
+    wildcards: fam=group_9202
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/mdtA_4.aln
+    output: seq2geno_temp/extracted_proteins_nt/mdtA_4.vcf
+    jobid: 11252
+    wildcards: fam=mdtA_4
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_9315.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_9315.vcf
+    jobid: 11536
+    wildcards: fam=group_9315
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_6565.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_6565.vcf
+    jobid: 7847
+    wildcards: fam=group_6565
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/mutM.aln
+    output: seq2geno_temp/extracted_proteins_nt/mutM.vcf
+    jobid: 8806
+    wildcards: fam=mutM
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/pncB2_1.aln
+    output: seq2geno_temp/extracted_proteins_nt/pncB2_1.vcf
+    jobid: 8396
+    wildcards: fam=pncB2_1
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_6071.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_6071.vcf
+    jobid: 10083
+    wildcards: fam=group_6071
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/rlmA.aln
+    output: seq2geno_temp/extracted_proteins_nt/rlmA.vcf
+    jobid: 7792
+    wildcards: fam=rlmA
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/btr_4.aln
+    output: seq2geno_temp/extracted_proteins_nt/btr_4.vcf
+    jobid: 10672
+    wildcards: fam=btr_4
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/yijE_1.aln
+    output: seq2geno_temp/extracted_proteins_nt/yijE_1.vcf
+    jobid: 9205
+    wildcards: fam=yijE_1
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/tauB.aln
+    output: seq2geno_temp/extracted_proteins_nt/tauB.vcf
+    jobid: 8371
+    wildcards: fam=tauB
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/epsE_2.aln
+    output: seq2geno_temp/extracted_proteins_nt/epsE_2.vcf
+    jobid: 10000
+    wildcards: fam=epsE_2
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/acrC_1.aln
+    output: seq2geno_temp/extracted_proteins_nt/acrC_1.vcf
+    jobid: 6406
+    wildcards: fam=acrC_1
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/uppS.aln
+    output: seq2geno_temp/extracted_proteins_nt/uppS.vcf
+    jobid: 6611
+    wildcards: fam=uppS
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_6559.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_6559.vcf
+    jobid: 7015
+    wildcards: fam=group_6559
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_5306.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_5306.vcf
+    jobid: 11363
+    wildcards: fam=group_5306
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_9058.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_9058.vcf
+    jobid: 9953
+    wildcards: fam=group_9058
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/clpB_1.aln
+    output: seq2geno_temp/extracted_proteins_nt/clpB_1.vcf
+    jobid: 10550
+    wildcards: fam=clpB_1
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_4990.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_4990.vcf
+    jobid: 7962
+    wildcards: fam=group_4990
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_2015.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_2015.vcf
+    jobid: 11096
+    wildcards: fam=group_2015
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_1264.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_1264.vcf
+    jobid: 7381
+    wildcards: fam=group_1264
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/sbp_1.aln
+    output: seq2geno_temp/extracted_proteins_nt/sbp_1.vcf
+    jobid: 10699
+    wildcards: fam=sbp_1
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/ppsB.aln
+    output: seq2geno_temp/extracted_proteins_nt/ppsB.vcf
+    jobid: 9853
+    wildcards: fam=ppsB
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_1526.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_1526.vcf
+    jobid: 10549
+    wildcards: fam=group_1526
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/livJ.aln
+    output: seq2geno_temp/extracted_proteins_nt/livJ.vcf
+    jobid: 6586
+    wildcards: fam=livJ
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_5818.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_5818.vcf
+    jobid: 7184
+    wildcards: fam=group_5818
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/aprA_2.aln
+    output: seq2geno_temp/extracted_proteins_nt/aprA_2.vcf
+    jobid: 8046
+    wildcards: fam=aprA_2
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/ltaE_1.aln
+    output: seq2geno_temp/extracted_proteins_nt/ltaE_1.vcf
+    jobid: 9433
+    wildcards: fam=ltaE_1
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_8800.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_8800.vcf
+    jobid: 9227
+    wildcards: fam=group_8800
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_672.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_672.vcf
+    jobid: 7590
+    wildcards: fam=group_672
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_6201.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_6201.vcf
+    jobid: 11388
+    wildcards: fam=group_6201
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/zntB_2.aln
+    output: seq2geno_temp/extracted_proteins_nt/zntB_2.vcf
+    jobid: 6267
+    wildcards: fam=zntB_2
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/pdhC.aln
+    output: seq2geno_temp/extracted_proteins_nt/pdhC.vcf
+    jobid: 7351
+    wildcards: fam=pdhC
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_5632.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_5632.vcf
+    jobid: 6334
+    wildcards: fam=group_5632
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_6251.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_6251.vcf
+    jobid: 9256
+    wildcards: fam=group_6251
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_667.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_667.vcf
+    jobid: 6767
+    wildcards: fam=group_667
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/hutU.aln
+    output: seq2geno_temp/extracted_proteins_nt/hutU.vcf
+    jobid: 7006
+    wildcards: fam=hutU
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_662.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_662.vcf
+    jobid: 9244
+    wildcards: fam=group_662
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/mrcB.aln
+    output: seq2geno_temp/extracted_proteins_nt/mrcB.vcf
+    jobid: 10327
+    wildcards: fam=mrcB
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/perB.aln
+    output: seq2geno_temp/extracted_proteins_nt/perB.vcf
+    jobid: 11407
+    wildcards: fam=perB
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_8160.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_8160.vcf
+    jobid: 7308
+    wildcards: fam=group_8160
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/rsmA.aln
+    output: seq2geno_temp/extracted_proteins_nt/rsmA.vcf
+    jobid: 9169
+    wildcards: fam=rsmA
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/pstP_2.aln
+    output: seq2geno_temp/extracted_proteins_nt/pstP_2.vcf
+    jobid: 9921
+    wildcards: fam=pstP_2
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_9376.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_9376.vcf
+    jobid: 10593
+    wildcards: fam=group_9376
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_2683.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_2683.vcf
+    jobid: 9515
+    wildcards: fam=group_2683
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/uvrB.aln
+    output: seq2geno_temp/extracted_proteins_nt/uvrB.vcf
+    jobid: 9046
+    wildcards: fam=uvrB
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_8831.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_8831.vcf
+    jobid: 7090
+    wildcards: fam=group_8831
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/dapF.aln
+    output: seq2geno_temp/extracted_proteins_nt/dapF.vcf
+    jobid: 8190
+    wildcards: fam=dapF
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/mcpQ_8.aln
+    output: seq2geno_temp/extracted_proteins_nt/mcpQ_8.vcf
+    jobid: 6988
+    wildcards: fam=mcpQ_8
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/yhdG_1.aln
+    output: seq2geno_temp/extracted_proteins_nt/yhdG_1.vcf
+    jobid: 7818
+    wildcards: fam=yhdG_1
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/phzB2_4.aln
+    output: seq2geno_temp/extracted_proteins_nt/phzB2_4.vcf
+    jobid: 9491
+    wildcards: fam=phzB2_4
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_5726.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_5726.vcf
+    jobid: 8201
+    wildcards: fam=group_5726
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/fliS_1.aln
+    output: seq2geno_temp/extracted_proteins_nt/fliS_1.vcf
+    jobid: 6926
+    wildcards: fam=fliS_1
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_8141.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_8141.vcf
+    jobid: 9261
+    wildcards: fam=group_8141
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/phnE_3.aln
+    output: seq2geno_temp/extracted_proteins_nt/phnE_3.vcf
+    jobid: 8216
+    wildcards: fam=phnE_3
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/nusA.aln
+    output: seq2geno_temp/extracted_proteins_nt/nusA.vcf
+    jobid: 9432
+    wildcards: fam=nusA
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/lysX_2.aln
+    output: seq2geno_temp/extracted_proteins_nt/lysX_2.vcf
+    jobid: 6609
+    wildcards: fam=lysX_2
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_6592.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_6592.vcf
+    jobid: 7495
+    wildcards: fam=group_6592
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_592.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_592.vcf
+    jobid: 9312
+    wildcards: fam=group_592
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/ssuB_1.aln
+    output: seq2geno_temp/extracted_proteins_nt/ssuB_1.vcf
+    jobid: 8242
+    wildcards: fam=ssuB_1
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/glxR_1.aln
+    output: seq2geno_temp/extracted_proteins_nt/glxR_1.vcf
+    jobid: 6216
+    wildcards: fam=glxR_1
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/gcvH_2.aln
+    output: seq2geno_temp/extracted_proteins_nt/gcvH_2.vcf
+    jobid: 7022
+    wildcards: fam=gcvH_2
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_5243.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_5243.vcf
+    jobid: 7703
+    wildcards: fam=group_5243
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_910.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_910.vcf
+    jobid: 6310
+    wildcards: fam=group_910
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/tgpA_2.aln
+    output: seq2geno_temp/extracted_proteins_nt/tgpA_2.vcf
+    jobid: 9394
+    wildcards: fam=tgpA_2
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/garK.aln
+    output: seq2geno_temp/extracted_proteins_nt/garK.vcf
+    jobid: 8938
+    wildcards: fam=garK
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_7804.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_7804.vcf
+    jobid: 6614
+    wildcards: fam=group_7804
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/lhgO_1.aln
+    output: seq2geno_temp/extracted_proteins_nt/lhgO_1.vcf
+    jobid: 9564
+    wildcards: fam=lhgO_1
+
+
+[Wed Sep 12 11:27:26 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/rluF.aln
+    output: seq2geno_temp/extracted_proteins_nt/rluF.vcf
+    jobid: 9579
+    wildcards: fam=rluF
+
+
+[Wed Sep 12 11:27:27 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/rpsF.aln
+    output: seq2geno_temp/extracted_proteins_nt/rpsF.vcf
+    jobid: 9338
+    wildcards: fam=rpsF
+
+
+[Wed Sep 12 11:27:27 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_1521.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_1521.vcf
+    jobid: 9639
+    wildcards: fam=group_1521
+
+
+[Wed Sep 12 11:27:27 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_198.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_198.vcf
+    jobid: 8524
+    wildcards: fam=group_198
+
+
+[Wed Sep 12 11:27:27 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/tsaA_1.aln
+    output: seq2geno_temp/extracted_proteins_nt/tsaA_1.vcf
+    jobid: 10853
+    wildcards: fam=tsaA_1
+
+
+[Wed Sep 12 11:27:27 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_1500.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_1500.vcf
+    jobid: 9998
+    wildcards: fam=group_1500
+
+
+[Wed Sep 12 11:27:27 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/group_810.aln
+    output: seq2geno_temp/extracted_proteins_nt/group_810.vcf
+    jobid: 6402
+    wildcards: fam=group_810
+
+
+[Wed Sep 12 11:27:27 2018]
+rule aln_to_vcf_per_fam:
+    input: seq2geno_temp/extracted_proteins_nt/bamA.aln
+    output: seq2geno_temp/extracted_proteins_nt/bamA.vcf
+    jobid: 9242
+    wildcards: fam=bamA
+
+

@@ -1,0 +1,91 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	5681	aln_to_vcf_per_fam
+	2	compress_feat_table
+	1	create_and_make_expr_table
+	1	create_coding_regions_aln
+	1	create_indel_table
+	1	expand_by_family
+	1	find_best_tree
+	1	postprocess_alignment
+	5681	vcf_to_indels_per_fam
+	1	write_dict_file
+	11372
+
+[Mon Sep 10 16:44:20 2018]
+rule create_coding_regions_aln:
+    input: seq2geno_temp/CH2500/bwa/cons.fa, seq2geno_temp/CH2502/bwa/cons.fa, seq2geno_temp/CH2522/bwa/cons.fa, seq2geno_temp/F1659/bwa/cons.fa, seq2geno_temp/ESP088/bwa/cons.fa, seq2geno_temp/MHH15083/bwa/cons.fa, seq2geno_temp/F2167/bwa/cons.fa, seq2geno_temp/F2097/bwa/cons.fa, seq2geno_temp/MHH14911/bwa/cons.fa, seq2geno_temp/MHH15103/bwa/cons.fa
+    output: seq2geno_temp/OneBig.aln
+    jobid: 19
+    wildcards: TMP_D=seq2geno_temp
+
+[Mon Sep 10 18:46:08 2018]
+Finished job 19.
+1 of 11372 steps (0.01%) done
+
+[Mon Sep 10 18:46:08 2018]
+rule postprocess_alignment:
+    input: seq2geno_temp/OneBig.aln
+    output: seq2geno_temp/OneBig.var.aln
+    jobid: 13
+    wildcards: TMP_D=seq2geno_temp
+
+[Mon Sep 10 18:46:22 2018]
+Finished job 13.
+2 of 11372 steps (0.02%) done
+
+[Mon Sep 10 18:46:22 2018]
+rule find_best_tree:
+    input: seq2geno_temp/OneBig.var.aln
+    output: /net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/results/Paeru.nwk
+    jobid: 4
+
+[Mon Sep 10 18:47:07 2018]
+Finished job 4.
+3 of 11372 steps (0.03%) done
+
+[Mon Sep 10 18:47:07 2018]
+rule compress_feat_table:
+    input: /net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/results/gpa.tab
+    output: /net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/results/gpa.tab_GROUPS, /net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/results/gpa.tab_NON-RDNT
+    jobid: 3
+    wildcards: prefix=/net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/results/gpa.tab
+
+[Mon Sep 10 18:47:10 2018]
+Finished job 3.
+4 of 11372 steps (0.04%) done
+
+[Mon Sep 10 18:47:11 2018]
+rule write_dict_file:
+    input: seq2geno_temp/CH2500/rna_sorted.rmdup.rpg, seq2geno_temp/CH2502/rna_sorted.rmdup.rpg, seq2geno_temp/CH2522/rna_sorted.rmdup.rpg, seq2geno_temp/F1659/rna_sorted.rmdup.rpg, seq2geno_temp/ESP088/rna_sorted.rmdup.rpg, seq2geno_temp/MHH15083/rna_sorted.rmdup.rpg, seq2geno_temp/F2167/rna_sorted.rmdup.rpg, seq2geno_temp/F2097/rna_sorted.rmdup.rpg, seq2geno_temp/MHH14911/rna_sorted.rmdup.rpg, seq2geno_temp/MHH15103/rna_sorted.rmdup.rpg
+    output: seq2geno_temp/rpg_dict
+    jobid: 15
+
+[Mon Sep 10 18:47:11 2018]
+Finished job 15.
+5 of 11372 steps (0.04%) done
+
+[Mon Sep 10 18:47:11 2018]
+rule create_and_make_expr_table:
+    input: seq2geno_temp/rpg_dict, annotations_for_expr.tab
+    output: /net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/results/expr.tab
+    jobid: 8
+
+    [Mon Sep 10 18:47:12 2018]
+    Error in rule create_and_make_expr_table:
+        jobid: 8
+        output: /net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/results/expr.tab
+
+RuleException:
+CalledProcessError in line 262 of /net/sgi/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/CREATE_EXPR_TABLE.smk:
+Command ' set -euo pipefail;  Rscript /net/sgi/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/lib/.snakemake.pnf_7uw2.collect_rpg_data.R ' returned non-zero exit status 1.
+  File "/net/sgi/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/CREATE_EXPR_TABLE.smk", line 262, in __rule_create_and_make_expr_table
+  File "/home/thkuo/miniconda3/envs/seq2geno/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /net/sgi/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/.snakemake/log/2018-09-10T162903.908480.snakemake.log
