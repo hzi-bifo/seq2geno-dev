@@ -31,7 +31,8 @@ annotation <- read.table(anno_file,header=TRUE, sep='\t', stringsAsFactors=F)
 dict			<- read.table(dict_file,header=TRUE, stringsAsFactor= F, check.names= F)
 nsamples		<- nrow(dict)			# no. of samples
 all_rpg			<- matrix(0,length(annotation$gene_name),nsamples)
-rownames(all_rpg)	<- rownames(annotation)
+#rownames(all_rpg)	<- rownames(annotation)
+rownames(all_rpg)	<- annotation$locus
 colnames(all_rpg)	<- dict$name
 #conditions		<- dict$condition
 
@@ -52,5 +53,6 @@ for (i in 1:nrow(dict)){
 	} # otherwise blank mode is assumed
 	all_rpg[,i]	<- rpg
 }
+print(t(all_rpg)[1:3, 1:3])
 #write.table(all_rpg,paste(dict_file,".rpg",sep=""),sep="\t", col.names=NA, quote= F)
-write.table(t(all_rpg), out_file, sep="\t", col.names=NA, quote= F)
+#write.table(t(all_rpg), out_file, sep="\t", col.names=NA, quote= F)

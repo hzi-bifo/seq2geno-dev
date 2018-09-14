@@ -31,7 +31,7 @@ annotation <- read.table(anno_file,header=TRUE, sep='\t', stringsAsFactors=F)
 dict			<- read.table(dict_file,header=TRUE, stringsAsFactor= F, check.names= F)
 nsamples		<- nrow(dict)			# no. of samples
 all_rpg			<- matrix(0,length(annotation$gene_name),nsamples)
-rownames(all_rpg)	<- rownames(annotation)
+rownames(all_rpg)	<- annotation$locus
 colnames(all_rpg)	<- dict$name
 #conditions		<- dict$condition
 
