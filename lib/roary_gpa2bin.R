@@ -21,4 +21,4 @@ mat<- load_data_matrix(pa_f)# isolates in rows
 
 #print(dim(mat))
 #print(mat[1:5, 1:5])
-write.table(mat, file= out_f, sep='\t', quote= F)
+write.table(mat, file= out_f, sep='\t', quote= F,col.names= NA)
