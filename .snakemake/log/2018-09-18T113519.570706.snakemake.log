@@ -1,0 +1,364 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	10	convert_to_sin
+	1	create_and_make_expr_table
+	1	for_expr_create_annot
+	10	gene_counts
+	10	rna_mapping
+	33
+
+[Tue Sep 18 11:35:23 2018]
+rule rna_mapping:
+    input: data/strains/rna/F1659.fastq.gz, /net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/data/reference/RefCln_UCBPP-PA14.fa, /net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/data/reference/RefCln_UCBPP-PA14.fa.stidx, /net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/data/reference/RefCln_UCBPP-PA14.fa.sthash, /net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/data/reference/RefCln_UCBPP-PA14.fa.bwt, /net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/data/reference/RefCln_UCBPP-PA14.fa.fai
+    output: seq2geno_temp/F1659/stampy/rna.sam
+    jobid: 26
+    wildcards: TMP_D=seq2geno_temp, strain=F1659
+
+[Tue Sep 18 12:06:09 2018]
+Finished job 26.
+1 of 33 steps (3%) done
+
+[Tue Sep 18 12:06:09 2018]
+rule convert_to_sin:
+    input: seq2geno_temp/F1659/stampy/rna.sam
+    output: seq2geno_temp/F1659/rna.sin
+    jobid: 16
+    wildcards: TMP_D=seq2geno_temp, strain=F1659
+
+[Tue Sep 18 12:06:57 2018]
+Finished job 16.
+2 of 33 steps (6%) done
+
+[Tue Sep 18 12:06:57 2018]
+rule gene_counts:
+    input: seq2geno_temp/F1659/rna.sin, annotations_for_snps.tab
+    output: seq2geno_temp/F1659/rna.rpg
+    jobid: 4
+    wildcards: TMP_D=seq2geno_temp, strain=F1659
+
+[Tue Sep 18 12:07:06 2018]
+Finished job 4.
+3 of 33 steps (9%) done
+
+[Tue Sep 18 12:07:06 2018]
+rule rna_mapping:
+    input: data/strains/rna/CH2522.fastq.gz, /net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/data/reference/RefCln_UCBPP-PA14.fa, /net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/data/reference/RefCln_UCBPP-PA14.fa.stidx, /net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/data/reference/RefCln_UCBPP-PA14.fa.sthash, /net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/data/reference/RefCln_UCBPP-PA14.fa.bwt, /net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/data/reference/RefCln_UCBPP-PA14.fa.fai
+    output: seq2geno_temp/CH2522/stampy/rna.sam
+    jobid: 25
+    wildcards: TMP_D=seq2geno_temp, strain=CH2522
+
+[Tue Sep 18 12:30:16 2018]
+Finished job 25.
+4 of 33 steps (12%) done
+
+[Tue Sep 18 12:30:16 2018]
+rule convert_to_sin:
+    input: seq2geno_temp/CH2522/stampy/rna.sam
+    output: seq2geno_temp/CH2522/rna.sin
+    jobid: 15
+    wildcards: TMP_D=seq2geno_temp, strain=CH2522
+
+[Tue Sep 18 12:30:57 2018]
+Finished job 15.
+5 of 33 steps (15%) done
+
+[Tue Sep 18 12:30:57 2018]
+rule rna_mapping:
+    input: data/strains/rna/MHH15103.fastq.gz, /net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/data/reference/RefCln_UCBPP-PA14.fa, /net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/data/reference/RefCln_UCBPP-PA14.fa.stidx, /net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/data/reference/RefCln_UCBPP-PA14.fa.sthash, /net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/data/reference/RefCln_UCBPP-PA14.fa.bwt, /net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/data/reference/RefCln_UCBPP-PA14.fa.fai
+    output: seq2geno_temp/MHH15103/stampy/rna.sam
+    jobid: 24
+    wildcards: TMP_D=seq2geno_temp, strain=MHH15103
+
+[Tue Sep 18 12:51:38 2018]
+Finished job 24.
+6 of 33 steps (18%) done
+
+[Tue Sep 18 12:51:38 2018]
+rule convert_to_sin:
+    input: seq2geno_temp/MHH15103/stampy/rna.sam
+    output: seq2geno_temp/MHH15103/rna.sin
+    jobid: 13
+    wildcards: TMP_D=seq2geno_temp, strain=MHH15103
+
+[Tue Sep 18 12:52:16 2018]
+Finished job 13.
+7 of 33 steps (21%) done
+
+[Tue Sep 18 12:52:16 2018]
+rule rna_mapping:
+    input: data/strains/rna/MHH14911.fastq.gz, /net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/data/reference/RefCln_UCBPP-PA14.fa, /net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/data/reference/RefCln_UCBPP-PA14.fa.stidx, /net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/data/reference/RefCln_UCBPP-PA14.fa.sthash, /net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/data/reference/RefCln_UCBPP-PA14.fa.bwt, /net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/data/reference/RefCln_UCBPP-PA14.fa.fai
+    output: seq2geno_temp/MHH14911/stampy/rna.sam
+    jobid: 28
+    wildcards: TMP_D=seq2geno_temp, strain=MHH14911
+
+[Tue Sep 18 13:13:04 2018]
+Finished job 28.
+8 of 33 steps (24%) done
+
+[Tue Sep 18 13:13:04 2018]
+rule convert_to_sin:
+    input: seq2geno_temp/MHH14911/stampy/rna.sam
+    output: seq2geno_temp/MHH14911/rna.sin
+    jobid: 18
+    wildcards: TMP_D=seq2geno_temp, strain=MHH14911
+
+[Tue Sep 18 13:13:41 2018]
+Finished job 18.
+9 of 33 steps (27%) done
+
+[Tue Sep 18 13:13:41 2018]
+rule rna_mapping:
+    input: data/strains/rna/F2167.fastq.gz, /net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/data/reference/RefCln_UCBPP-PA14.fa, /net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/data/reference/RefCln_UCBPP-PA14.fa.stidx, /net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/data/reference/RefCln_UCBPP-PA14.fa.sthash, /net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/data/reference/RefCln_UCBPP-PA14.fa.bwt, /net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/data/reference/RefCln_UCBPP-PA14.fa.fai
+    output: seq2geno_temp/F2167/stampy/rna.sam
+    jobid: 30
+    wildcards: TMP_D=seq2geno_temp, strain=F2167
+
+[Tue Sep 18 13:32:11 2018]
+Finished job 30.
+10 of 33 steps (30%) done
+
+[Tue Sep 18 13:32:11 2018]
+rule convert_to_sin:
+    input: seq2geno_temp/F2167/stampy/rna.sam
+    output: seq2geno_temp/F2167/rna.sin
+    jobid: 20
+    wildcards: TMP_D=seq2geno_temp, strain=F2167
+
+[Tue Sep 18 13:32:44 2018]
+Finished job 20.
+11 of 33 steps (33%) done
+
+[Tue Sep 18 13:32:44 2018]
+rule rna_mapping:
+    input: data/strains/rna/CH2502.fastq.gz, /net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/data/reference/RefCln_UCBPP-PA14.fa, /net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/data/reference/RefCln_UCBPP-PA14.fa.stidx, /net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/data/reference/RefCln_UCBPP-PA14.fa.sthash, /net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/data/reference/RefCln_UCBPP-PA14.fa.bwt, /net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/data/reference/RefCln_UCBPP-PA14.fa.fai
+    output: seq2geno_temp/CH2502/stampy/rna.sam
+    jobid: 27
+    wildcards: TMP_D=seq2geno_temp, strain=CH2502
+
+[Tue Sep 18 13:51:36 2018]
+Finished job 27.
+12 of 33 steps (36%) done
+
+[Tue Sep 18 13:51:36 2018]
+rule convert_to_sin:
+    input: seq2geno_temp/CH2502/stampy/rna.sam
+    output: seq2geno_temp/CH2502/rna.sin
+    jobid: 17
+    wildcards: TMP_D=seq2geno_temp, strain=CH2502
+
+[Tue Sep 18 13:52:11 2018]
+Finished job 17.
+13 of 33 steps (39%) done
+
+[Tue Sep 18 13:52:11 2018]
+rule rna_mapping:
+    input: data/strains/rna/MHH15083.fastq.gz, /net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/data/reference/RefCln_UCBPP-PA14.fa, /net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/data/reference/RefCln_UCBPP-PA14.fa.stidx, /net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/data/reference/RefCln_UCBPP-PA14.fa.sthash, /net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/data/reference/RefCln_UCBPP-PA14.fa.bwt, /net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/data/reference/RefCln_UCBPP-PA14.fa.fai
+    output: seq2geno_temp/MHH15083/stampy/rna.sam
+    jobid: 32
+    wildcards: TMP_D=seq2geno_temp, strain=MHH15083
+
+[Tue Sep 18 14:10:44 2018]
+Finished job 32.
+14 of 33 steps (42%) done
+
+[Tue Sep 18 14:10:44 2018]
+rule convert_to_sin:
+    input: seq2geno_temp/MHH15083/stampy/rna.sam
+    output: seq2geno_temp/MHH15083/rna.sin
+    jobid: 22
+    wildcards: TMP_D=seq2geno_temp, strain=MHH15083
+
+[Tue Sep 18 14:11:19 2018]
+Finished job 22.
+15 of 33 steps (45%) done
+
+[Tue Sep 18 14:11:19 2018]
+rule rna_mapping:
+    input: data/strains/rna/F2097.fastq.gz, /net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/data/reference/RefCln_UCBPP-PA14.fa, /net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/data/reference/RefCln_UCBPP-PA14.fa.stidx, /net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/data/reference/RefCln_UCBPP-PA14.fa.sthash, /net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/data/reference/RefCln_UCBPP-PA14.fa.bwt, /net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/data/reference/RefCln_UCBPP-PA14.fa.fai
+    output: seq2geno_temp/F2097/stampy/rna.sam
+    jobid: 31
+    wildcards: TMP_D=seq2geno_temp, strain=F2097
+
+[Tue Sep 18 14:27:23 2018]
+Finished job 31.
+16 of 33 steps (48%) done
+
+[Tue Sep 18 14:27:23 2018]
+rule convert_to_sin:
+    input: seq2geno_temp/F2097/stampy/rna.sam
+    output: seq2geno_temp/F2097/rna.sin
+    jobid: 21
+    wildcards: TMP_D=seq2geno_temp, strain=F2097
+
+[Tue Sep 18 14:27:53 2018]
+Finished job 21.
+17 of 33 steps (52%) done
+
+[Tue Sep 18 14:27:53 2018]
+rule rna_mapping:
+    input: data/strains/rna/CH2500.fastq.gz, /net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/data/reference/RefCln_UCBPP-PA14.fa, /net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/data/reference/RefCln_UCBPP-PA14.fa.stidx, /net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/data/reference/RefCln_UCBPP-PA14.fa.sthash, /net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/data/reference/RefCln_UCBPP-PA14.fa.bwt, /net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/data/reference/RefCln_UCBPP-PA14.fa.fai
+    output: seq2geno_temp/CH2500/stampy/rna.sam
+    jobid: 33
+    wildcards: TMP_D=seq2geno_temp, strain=CH2500
+
+[Tue Sep 18 14:40:00 2018]
+Finished job 33.
+18 of 33 steps (55%) done
+
+[Tue Sep 18 14:40:00 2018]
+rule convert_to_sin:
+    input: seq2geno_temp/CH2500/stampy/rna.sam
+    output: seq2geno_temp/CH2500/rna.sin
+    jobid: 23
+    wildcards: TMP_D=seq2geno_temp, strain=CH2500
+
+[Tue Sep 18 14:40:24 2018]
+Finished job 23.
+19 of 33 steps (58%) done
+
+[Tue Sep 18 14:40:24 2018]
+rule rna_mapping:
+    input: data/strains/rna/ESP088.fastq.gz, /net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/data/reference/RefCln_UCBPP-PA14.fa, /net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/data/reference/RefCln_UCBPP-PA14.fa.stidx, /net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/data/reference/RefCln_UCBPP-PA14.fa.sthash, /net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/data/reference/RefCln_UCBPP-PA14.fa.bwt, /net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/data/reference/RefCln_UCBPP-PA14.fa.fai
+    output: seq2geno_temp/ESP088/stampy/rna.sam
+    jobid: 29
+    wildcards: TMP_D=seq2geno_temp, strain=ESP088
+
+[Tue Sep 18 14:51:31 2018]
+Finished job 29.
+20 of 33 steps (61%) done
+
+[Tue Sep 18 14:51:31 2018]
+rule convert_to_sin:
+    input: seq2geno_temp/ESP088/stampy/rna.sam
+    output: seq2geno_temp/ESP088/rna.sin
+    jobid: 19
+    wildcards: TMP_D=seq2geno_temp, strain=ESP088
+
+[Tue Sep 18 14:51:54 2018]
+Finished job 19.
+21 of 33 steps (64%) done
+
+[Tue Sep 18 14:51:54 2018]
+rule gene_counts:
+    input: seq2geno_temp/CH2522/rna.sin, annotations_for_snps.tab
+    output: seq2geno_temp/CH2522/rna.rpg
+    jobid: 3
+    wildcards: TMP_D=seq2geno_temp, strain=CH2522
+
+[Tue Sep 18 14:52:02 2018]
+Finished job 3.
+22 of 33 steps (67%) done
+
+[Tue Sep 18 14:52:02 2018]
+rule gene_counts:
+    input: seq2geno_temp/MHH15083/rna.sin, annotations_for_snps.tab
+    output: seq2geno_temp/MHH15083/rna.rpg
+    jobid: 11
+    wildcards: TMP_D=seq2geno_temp, strain=MHH15083
+
+[Tue Sep 18 14:52:11 2018]
+Finished job 11.
+23 of 33 steps (70%) done
+
+[Tue Sep 18 14:52:11 2018]
+rule gene_counts:
+    input: seq2geno_temp/MHH15103/rna.sin, annotations_for_snps.tab
+    output: seq2geno_temp/MHH15103/rna.rpg
+    jobid: 2
+    wildcards: TMP_D=seq2geno_temp, strain=MHH15103
+
+[Tue Sep 18 14:52:18 2018]
+Finished job 2.
+24 of 33 steps (73%) done
+
+[Tue Sep 18 14:52:18 2018]
+rule gene_counts:
+    input: seq2geno_temp/F2167/rna.sin, annotations_for_snps.tab
+    output: seq2geno_temp/F2167/rna.rpg
+    jobid: 9
+    wildcards: TMP_D=seq2geno_temp, strain=F2167
+
+[Tue Sep 18 14:52:26 2018]
+Finished job 9.
+25 of 33 steps (76%) done
+
+[Tue Sep 18 14:52:26 2018]
+rule gene_counts:
+    input: seq2geno_temp/MHH14911/rna.sin, annotations_for_snps.tab
+    output: seq2geno_temp/MHH14911/rna.rpg
+    jobid: 6
+    wildcards: TMP_D=seq2geno_temp, strain=MHH14911
+
+[Tue Sep 18 14:52:34 2018]
+Finished job 6.
+26 of 33 steps (79%) done
+
+[Tue Sep 18 14:52:34 2018]
+rule gene_counts:
+    input: seq2geno_temp/CH2502/rna.sin, annotations_for_snps.tab
+    output: seq2geno_temp/CH2502/rna.rpg
+    jobid: 5
+    wildcards: TMP_D=seq2geno_temp, strain=CH2502
+
+[Tue Sep 18 14:52:42 2018]
+Finished job 5.
+27 of 33 steps (82%) done
+
+[Tue Sep 18 14:52:42 2018]
+rule gene_counts:
+    input: seq2geno_temp/CH2500/rna.sin, annotations_for_snps.tab
+    output: seq2geno_temp/CH2500/rna.rpg
+    jobid: 12
+    wildcards: TMP_D=seq2geno_temp, strain=CH2500
+
+[Tue Sep 18 14:52:49 2018]
+Finished job 12.
+28 of 33 steps (85%) done
+
+[Tue Sep 18 14:52:49 2018]
+rule gene_counts:
+    input: seq2geno_temp/F2097/rna.sin, annotations_for_snps.tab
+    output: seq2geno_temp/F2097/rna.rpg
+    jobid: 10
+    wildcards: TMP_D=seq2geno_temp, strain=F2097
+
+[Tue Sep 18 14:52:56 2018]
+Finished job 10.
+29 of 33 steps (88%) done
+
+[Tue Sep 18 14:52:56 2018]
+rule gene_counts:
+    input: seq2geno_temp/ESP088/rna.sin, annotations_for_snps.tab
+    output: seq2geno_temp/ESP088/rna.rpg
+    jobid: 7
+    wildcards: TMP_D=seq2geno_temp, strain=ESP088
+
+[Tue Sep 18 14:53:03 2018]
+Finished job 7.
+30 of 33 steps (91%) done
+
+[Tue Sep 18 14:53:03 2018]
+rule for_expr_create_annot:
+    input: /net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/data/reference/RefCln_UCBPP-PA14.gbk
+    output: seq2geno_temp/R_annotations.tab
+    jobid: 8
+    wildcards: TMP_D=seq2geno_temp
+
+    [Tue Sep 18 14:53:05 2018]
+    Error in rule for_expr_create_annot:
+        jobid: 8
+        output: seq2geno_temp/R_annotations.tab
+
+RuleException:
+CalledProcessError in line 44 of /net/sgi/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/CREATE_EXPR_TABLE.smk:
+Command ' set -euo pipefail;  /home/thkuo/miniconda3/envs/seq2geno/bin/python /net/sgi/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/lib/.snakemake.pd0piu28.create_R_anno.py ' returned non-zero exit status 1.
+  File "/net/sgi/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/CREATE_EXPR_TABLE.smk", line 44, in __rule_for_expr_create_annot
+  File "/home/thkuo/miniconda3/envs/seq2geno/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /net/sgi/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/.snakemake/log/2018-09-18T113519.570706.snakemake.log

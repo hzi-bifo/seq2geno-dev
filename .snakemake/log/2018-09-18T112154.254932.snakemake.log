@@ -1,0 +1,6 @@
+Building DAG of jobs...
+InputFunctionException in line 106 of /net/sgi/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/CREATE_EXPR_TABLE.smk:
+AttributeError: 'Wildcards' object has no attribute 'sample'
+Wildcards:
+TMP_D=seq2geno_temp
+strain=CH2500

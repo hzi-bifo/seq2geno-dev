@@ -13,11 +13,11 @@ software:
   mapper: 'bwa'
   assembler: 'spades'
 
-cores: 16
+cores: 30
 
 ##### files
 #### sample wise
-samples: '/net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/data/samples.tsv'
+samples: '/net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/data/samples.6.tsv'
 #### only one
 reference_sequence: '/net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/data/reference/RefCln_UCBPP-PA14.fa'
 reference_annotation: '/net/metagenomics/data/from_moni/old.tzuhao/seq2geno/dev_versions/v6/data/reference/RefCln_UCBPP-PA14.gbk'

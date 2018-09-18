@@ -30,7 +30,7 @@ with open(out_f, 'w') as out_fh:
         if not ('locus_tag' in fea.qualifiers):
             continue
         d=[species_strain, acc, sequence_type, fea.qualifiers['locus_tag'][0],
-            target_feature, str(fea.location.start), str(fea.location.end),
+            target_feature, str(fea.location.start+1), str(fea.location.end),
             '+' if fea.strand  == 1 else '-', fea.qualifiers['name'][0] if
             'name' in fea.qualifiers else '.']
         out_fh.write('\t'.join(d)+'\n')

@@ -11,7 +11,7 @@ Only the column "gene_name" will be used in the subsequently steps...
 
 gbk_f= snakemake.input['ref_gbk']
 #species_strain= snakemake.params['species']
-out_f=snakemake.output['anno_f']
+out_f=snakemake.output['R_anno_f']
 #gbk_f= 'data/reference/RefCln_UCBPP-PA14.gbk'
 #species_strain= 'Paeru_PA14'
 #out_f='test.tab'
