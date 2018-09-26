@@ -71,13 +71,13 @@ rule all_snps_table:
 rule all_snps_list:
     input:
         ## the exact files should also be, so they cannot be deleted before 
-        flatcount_file=expand(os.path.join(TMP_D, '{strain}', SOFTWARE['mapper'], 'dna_paired.flatcount'), strain=STRAINS),
-        snp_vcf_file=expand(os.path.join(TMP_D, '{strain}', SOFTWARE['mapper'], 'dna.flt.vcf'), strain=STRAINS),
+        flatcount_file=expand(os.path.join(TMP_D, '{strain}', 'dna.flatcount'), strain=STRAINS),
+        snp_vcf_file=expand(os.path.join(TMP_D, '{strain}', 'samtools', 'dna.flt.vcf'), strain=STRAINS),
         flt_files=expand("{strain}.flatcount", 
             strain=STRAINS),
         flt_vcf_files=expand("{strain}.flt.vcf", 
             strain=STRAINS),
-        dict_file= os.path.join(TMP_D, 'dict.txt'),
+        dict_f= os.path.join(TMP_D, 'dict.txt'),
         anno_f='annotations_for_snps.tab'
     output: 
         snps_list=temp(os.path.join(TMP_D, 'DNA_Pool1_final.tab'))
@@ -123,22 +123,24 @@ rule create_dict_file:
 rule for_tab_copy_files:
     ## duplicate everyone to create 'STRAIN.flt.vcf' and 'STRAIN.flatcount'
     input: 
-        flatcount_file=lambda wildcards: os.path.join(TMP_D, wildcards.strain, SOFTWARE['mapper'], 'dna_paired.flatcount'),
-        snp_vcf_file=lambda wildcards: os.path.join(TMP_D, wildcards.strain, SOFTWARE['mapper'], 'dna.flt.vcf')
+        flatcount_file=lambda wildcards: os.path.join(TMP_D, wildcards.strain, 'dna.flatcount'),
+        snp_vcf_file=lambda wildcards: os.path.join(TMP_D, wildcards.strain, 'samtools', 'dna.flt.vcf')
     output:
-        flatcount=temp("{strain}.flatcount"),
-        flt_vcf=temp("{strain}.flt.vcf")
+        flatcount=temp('{strain}.flatcount'),
+        flt_vcf=temp('{strain}.flt.vcf')
+    wildcard_constraints:
+        strain='^[^\/]+'
     shell:
         """
-        ln -s {input.snp_vcf_file} {output.flt_vcf}
-        ln -s {input.flatcount_file} {output.flatcount}
+        ln -fs {input.snp_vcf_file} {output.flt_vcf}
+        ln -fs {input.flatcount_file} {output.flatcount}
         """
 
 rule for_snps_convert_to_art:
     input: 
-        STAMPY_SAM='{TMP_D}/{strain}/{mapper}/dna_paired.sam'
+        STAMPY_SAM='{TMP_D}/{strain}/stampy/tab_dna.sam'
     output:
-        ART=temp('{TMP_D}/{strain}/{mapper}/dna_paired.art')
+        ART=temp('{TMP_D}/{strain}/dna.art')
     params:
         SAM2ART='lib/expr/sam2art.pl'
     shell:
@@ -146,9 +148,9 @@ rule for_snps_convert_to_art:
 
 rule for_snps_convert_to_sin:
     input: 
-        STAMPY_SAM='{TMP_D}/{strain}/{mapper}/dna_paired.sam'
+        STAMPY_SAM='{TMP_D}/{strain}/stampy/tab_dna.sam'
     output:
-        SIN=temp('{TMP_D}/{strain}/{mapper}/dna_paired.sin')
+        SIN=temp('{TMP_D}/{strain}/dna.sin')
     params:
         SAM2ART='lib/expr/sam2art.pl'
     shell:
@@ -156,9 +158,9 @@ rule for_snps_convert_to_sin:
 
 rule for_snps_convert_to_flatcount:
     input: 
-        STAMPY_SAM='{TMP_D}/{strain}/{mapper}/dna_paired.sam'
+        STAMPY_SAM='{TMP_D}/{strain}/stampy/tab_dna.sam'
     output:
-        FLTCNT=temp('{TMP_D}/{strain}/{mapper}/dna_paired.flatcount')
+        FLTCNT=temp('{TMP_D}/{strain}/dna.flatcount')
     params:
         SAM2ART='lib/expr/sam2art.pl'
     shell:

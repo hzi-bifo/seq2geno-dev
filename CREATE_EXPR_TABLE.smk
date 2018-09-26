@@ -1,8 +1,7 @@
 rule create_and_make_expr_table:
     input:
         RPG_FILES=expand('{TMP_D}/{strain}/rna.rpg', strain=STRAINS, TMP_D=
-TMP_D),
-        R_anno_f=expand('{TMP_D}/R_annotations.tab', TMP_D=TMP_D)
+TMP_D)
     output:
         expr_table=config['expr_table']
     params:
@@ -10,15 +9,20 @@ TMP_D),
         strains= STRAINS
     run:
         import pandas as pd
-        anno_f= input['R_anno_f'][0]
-        anno_df= pd.read_csv(anno_f, sep='\t', index_col= 0)
-        # load the rpgs
+        import re
+
+        def obtain_genecount_series(strain, rpg_f_with_feat):
+            rpg_df=pd.read_csv(rpg_f_with_feat, sep='\t', header= None,
+index_col= None)
+            colnames= ['feat', 'gene_count', 'antisensecount']
+            rpg_df= rpg_df.rename(columns= {n: colnames[n] for n in
+range(len(colnames))}).set_index('feat')
+            return(rpg_df['gene_count'].rename(strain))
+        # the rpg files
         rpg_files= {strain: os.path.join(params['tmp_d'], strain, 'rna.rpg') for strain in params['strains']}
         # integrate into one table
-        feat_names= anno_df.index.values.tolist()
-        rpg_df= pd.concat([pd.Series([int(line.strip()) for line in
-open(rpg_files[s], 'r')], name= s, index= feat_names) for s in rpg_files],
-axis= 1).T
+        rpg_df= pd.concat([obtain_genecount_series(s, rpg_files[s]) for s in
+rpg_files],axis= 1).T
         rpg_df.to_csv(output['expr_table'], sep= '\t', header= True, index= True)
 
 rule for_expr_rstats:
@@ -67,8 +71,9 @@ rule gene_counts:
         ART2GENECOUNT='lib/expr/art2genecount.pl'
     shell:
         """
-        {params.ART2GENECOUNT} -b -a {input.SIN} -t tab \
-        -r {input.anno_f} > {output.RPG_F}
+        {params.ART2GENECOUNT} \
+-a {input.SIN} -t tab \
+-r {input.anno_f} > {output.RPG_F}
         """
 
 
@@ -80,7 +85,7 @@ rule convert_to_art:
     params:
         SAM2ART='lib/expr/sam2art.pl'
     shell:
-        '{params[SAM2ART]} -s 2 {input.STAMPY_SAM} > {output} '
+        '{params.SAM2ART} -s 2 {input.STAMPY_SAM} > {output} '
 
 rule convert_to_sin:
     input: 
@@ -90,7 +95,7 @@ rule convert_to_sin:
     params:
         SAM2ART='lib/expr/sam2art.pl'
     shell:
-        '{params[SAM2ART]} -s 2 -l {input.STAMPY_SAM}  > {output} '
+        '{params.SAM2ART} -s 2 -l {input.STAMPY_SAM}  > {output} '
 
 rule convert_to_flatcount:
     input: 
@@ -100,7 +105,7 @@ rule convert_to_flatcount:
     params:
         SAM2ART='lib/expr/sam2art.pl'
     shell:
-        '{params[SAM2ART]} -f -s 2 {input.STAMPY_SAM}  > {output} '
+        '{params.SAM2ART} -f -s 2 {input.STAMPY_SAM}  > {output} '
 
 
 rule rna_mapping:
@@ -124,8 +129,9 @@ rule rna_mapping:
         """
         source activate Ariane_dna
         {params[STAMPY]} --bwaoptions=\"-q10 {input[REF]}\" \
-        -g {params[REF_PREFIX]} -h {params[REF_PREFIX]} -t{params[CORES]} \
-        -M {input[FQ]} > {output[STAMPY_SAM]} 
+-g {params.REF_PREFIX} \
+-h {params.REF_PREFIX} \
+-M {input.FQ} > {output.STAMPY_SAM} 
         source deactivate
         """
 

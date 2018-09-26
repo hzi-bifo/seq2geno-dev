@@ -52,8 +52,8 @@ rule create_coding_regions_aln:
     ## consensus sequence alignments
     input:
         cons_coding_seqs_every_strain=expand(
-            "{TMP_D}/{strains}/{mapper}/cons.fa", 
-            TMP_D= TMP_D, strains= STRAINS, mapper= 'bwa')
+            "{TMP_D}/{strains}/{caller}/cons.fa", 
+            TMP_D= TMP_D, strains= STRAINS, caller= 'freebayes')
     output:
         one_big_aln='{TMP_D}/OneBig.aln'
 

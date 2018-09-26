@@ -30,10 +30,14 @@ include: "MAKE_CONS.smk"
 include: "INFER_TREE.smk"
 include: "DETECT_SNPS.smk"
 include: "DETECT_SNPS_FOR_TABLE.smk"
+include: "LOAD_REFERENCE.smk"
+
 
 rule all:
     input:
         config['expr_table'],
+        config['nonsyn_snps_table'],
+        config['syn_snps_table']
         
 rule compress_feat_table:
     input: 

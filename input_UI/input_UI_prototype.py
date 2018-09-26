@@ -9,48 +9,58 @@ Tasks:
 import snakemake
 import os
 import argparse
+import yaml
 
 parser = argparse.ArgumentParser(
         description='Seq2Geno: the pipline tool '
             'for genomic features computation')
 
-## functions
 parser.add_argument('-v', action= 'version', 
     version='v.Beta')
-parser.add_argument('-w', dest='wd', type= str, default= '.',
+## functions
+functions_arg= parser.add_argument_group('functions')
+functions_arg.add_argument('-w', dest='wd', type= str, default= '.',
     help='set the working directory, where the relative paths are counted')
-parser.add_argument('-c', dest='comp', action= 'store_true',
+functions_arg.add_argument('-c', dest='comp', action= 'store_true',
     help='compress binary features by pattern')
-parser.add_argument('-d', action= 'store_true',
+functions_arg.add_argument('-d', action= 'store_true',
     help='check software dependencies')
 
 ## reference
-parser.add_argument('--ref_fa', dest='ref_fa', type= str,
+ref_arg= parser.add_argument_group('reference')
+ref_arg.add_argument('--ref_fa', dest='ref_fa', type= str,
     help='reference genome sequences (fasta)', default= '', required=True)
-parser.add_argument('--ref_gbk', dest='ref_gbk', type= str,
+ref_arg.add_argument('--ref_gbk', dest='ref_gbk', type= str,
     help='reference genome annotation (genbank)', default= '', required=True)
 
 ## samples
-parser.add_argument('--s', dest='samples', type= str,
-    help='list of samples and the corresponding reads', default= '', required=True)
+sam_arg= parser.add_argument_group('samples')
+sam_arg.add_argument('--s', dest='samples', type= str,
+    help='list of samples and sequencing reads', default= '', required=True)
 
 ## outputs
-parser.add_argument('--tree', nargs= '?', dest='tr',
+output_arg= parser.add_argument_group('outputs')
+output_arg.add_argument('--tree', nargs= '?', dest='tr',
         default= '',  type= str, help='the output tree file')
-parser.add_argument('--gpa', nargs= '?', dest='gpa',
+output_arg.add_argument('--gpa', nargs= '?', dest='gpa',
         default= '',  type= str, help='the output gene pres/abs table')
-parser.add_argument('--s-snp', nargs= '?', dest='s-snp',
+output_arg.add_argument('--s-snp', nargs= '?', dest='s-snp',
         default= '',  type= str, help='the output syn SNPs table')
-parser.add_argument('--ns-snp', nargs= '?', dest='ns-snp',
+output_arg.add_argument('--ns-snp', nargs= '?', dest='ns-snp',
         default= '',  type= str, help='the output non-syn SNPs table')
-parser.add_argument('--expr', nargs= '?', dest='xpr',
+output_arg.add_argument('--expr', nargs= '?', dest='xpr',
         default= '',  type= str, help='the output expression table')
-parser.add_argument('--ind', nargs= '?', dest='ind',
+output_arg.add_argument('--ind', nargs= '?', dest='ind',
         default= '',  type= str, help='the output tree table')
 
 args = parser.parse_args()
+convert_to_
 
-print(**args)
+## output the config file (yaml format)
+config_f= 'test.yaml'
+#print(yaml.dump(vars(args), default_flow_style= False))
+config_fh= open(config_f, 'w')
+yaml.dump(vars(args), config_fh, default_flow_style= False)
 
 '''
 ## create config file
