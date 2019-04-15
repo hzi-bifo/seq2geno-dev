@@ -85,11 +85,50 @@ def main():
     expr_arg.add_argument('-ar', dest='ar', action= 'store_true',
         default= False, help='ancestral reconstruction')
 
+    #####
+    ## genml creator & geno2pheno
+    pred_args=  parser.add_argument_group('predict')
+    pred_args.add_argument('--pred', dest= 'pred',
+            help= 'name of prediction (e.g. classX_vs_classY)', 
+            default= 'classX_vs_classY')
+    pred_args.add_argument('--opt', dest= 'optimize', 
+            help= 'target performance metric to optimize', 
+            choices=['scores_f1_1'])
+    pred_args.add_argument('--fold_n', dest= 'fold_n', 
+            help= 'number of folds during validation', 
+            default= 10)
+    pred_args.add_argument('--test_perc', dest= 'test_perc', 
+            help= 'proportion of samples for testing', 
+            default= 0.1)
+    pred_args.add_argument('--part', dest= 'part', 
+            help= 'method to partition dataset', 
+            choices= ['rand'])
+    pred_args.add_argument('--models', dest= 'models', 
+            help= 'machine learning algorithms', 
+            choices= ['svm', 'rf', 'lr'], nargs= '*')
+    pred_args.add_argument('--k-mer', dest= 'kmer', 
+            help= 'the k-mer size for prediction', 
+            default= 6)
+    pred_args.add_argument('--cls', dest= 'classes_f', 
+            help= 'a two-column file to specify label and prediction group')
+#    parser.add_argument('--seq2geno', dest= 'sg', 
+#            help= 'seq2geno project folder', required= True)
+    pred_args.add_argument('--out', dest= 'out', 
+            help= 'output folder', default= 'geno2pheno.results')
+    pred_args.add_argument('--override', dest= 'ovrd', 
+            help= 'override prediction results', default= 1)
+#--genoparse GeneML/pseudomonas.genml --override 0 --cores 30
+#    pred_args.add_argument(
+
     ######
     #####
     args, unknown = parser.parse_known_args()
     args.cores= int(args.cores)
+    args.sg= args.wd
 #    print(args)
 #    option_rules(args)
 
     return(args)
+
+if __name__=='__main__':
+    main()
